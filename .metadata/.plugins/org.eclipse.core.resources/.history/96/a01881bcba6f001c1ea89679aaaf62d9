@@ -1,0 +1,16 @@
+package fr.ensma.a3.ia.agentcase;
+
+
+import javafx.scene.control.Button;
+
+public class VueCase extends Button {
+	
+	private IPresentationCase mediateur;
+	
+	public VueCase(IPresentationCase media) {
+		super(" ");
+		mediateur = media;
+		
+	}
+
+}

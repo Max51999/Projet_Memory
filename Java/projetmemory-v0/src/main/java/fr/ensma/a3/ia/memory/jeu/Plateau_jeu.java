@@ -1,0 +1,23 @@
+package fr.ensma.a3.ia.memory.jeu;
+
+public class Plateau_jeu {
+
+	private Integer taille;
+	private Integer nb_paire;
+	private Integer nb_mystere;
+	
+	public Plateau_jeu(Integer size, Integer paire, Integer mystere) {
+		taille = size;
+		nb_paire = paire;
+		nb_mystere = mystere;
+	}
+	
+	public void initialisation() {}
+	
+	public void ajout_joueur() {}
+	
+	public void ajout_carte() {}
+	
+	public void fin_partie() {}
+	
+}

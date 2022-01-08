@@ -1,0 +1,25 @@
+package fr.ensma.a3.ia.agentcase;
+
+
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.control.Button;
+
+public class VueCase extends Button implements EventHandler<ActionEvent> {
+	
+	private IPresentationCase mediateur;
+	
+	public VueCase(IPresentationCase media) {
+		super();
+		mediateur = media;
+	}
+
+	@Override
+	public void handle(ActionEvent event) {
+		
+		
+	}
+	
+	
+
+}

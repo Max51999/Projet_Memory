@@ -1,0 +1,51 @@
+package fr.ensma.a3.ia.agentcase;
+
+
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+
+public class VueCase extends Button implements IPresentationCase, EventHandler<ActionEvent> {
+	
+	private IPresentationCase mediateur;
+	private PresentationCase presentation;
+	Image croix = new Image(getClass().getResource("/croix.png").toString());
+	ImageView imgcroix = new ImageView(croix);
+	
+	Image vide = new Image(getClass().getResource("/vide.png").toString());
+	ImageView vide = new ImageView("vide");
+	
+	Image rond = new Image(getClass().getResource("/rond.png").toString());
+	ImageView rond = new ImageView("rond");
+	
+	public VueCase(IPresentationCase media, PresentationCase pres) {
+		super();
+		mediateur = media;
+		presentation = pres;
+		setGraphic(vide);
+	}
+
+	@Override
+	public void handle(ActionEvent event) {
+		
+		
+	}
+
+	@Override
+	public VueCase getVue() {
+		return this;
+	}
+
+	@Override
+	public void setCase() {
+		
+		setGraphic(croix);
+		
+	}
+	
+	
+	
+
+}

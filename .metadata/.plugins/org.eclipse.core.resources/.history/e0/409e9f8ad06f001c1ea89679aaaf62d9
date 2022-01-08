@@ -1,0 +1,22 @@
+package fr.ensma.a3.ia.agentplateau;
+
+
+import fr.ensma.a3.ia.agentcase.PresentationCase;
+import javafx.scene.layout.GridPane;
+
+public class VuePlateau extends GridPane implements IVuePlateau {
+
+	private IPresentationPlateau mediateur;
+	private Integer i;
+	
+	public VuePlateau(IPresentationPlateau med) {
+		super();
+		
+		mediateur = med;
+		setHgap(3);
+		setVgap(3);
+		for (i=0;i<9;i++) {
+			getChildren().add(mediateur.getPresentation().getCase(i).getMediateur().getVue());
+		}
+	}
+}

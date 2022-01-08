@@ -1,0 +1,20 @@
+package fr.ensma.a3.ia.memory.joueur;
+
+public class Joueur {
+
+	private String id;
+	private Integer nb_cartes;
+	private Integer nb_tours;
+	private static Integer numero_joueur = 1;
+	private List<Cartes_classique> liste_carte;
+	
+	
+	public Joueur() {
+		id = "joueur" + numero_joueur;
+		nb_cartes = 0;
+		nb_tours = 1;
+		numero_joueur += 1;
+		liste_carte = new ArrayList<Carte_classique>();
+	}
+	
+}

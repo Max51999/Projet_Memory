@@ -1,0 +1,11 @@
+package fr.ensma.a3.ia.agentplateau;
+
+public class PresentationPlateau {
+
+	IPresentationPlateau mediateur;
+	
+	public PresentationPlateau() {
+		mediateur = new MediateurPlateau(this);
+	}
+	
+}

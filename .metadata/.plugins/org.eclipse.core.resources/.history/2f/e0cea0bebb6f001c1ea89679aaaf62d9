@@ -1,0 +1,11 @@
+package fr.ensma.a3.ia.agentcase;
+
+public class PresentationCase implements IPresentationCase {
+	
+	IPresentationCase mediateur;
+	
+	public PresentationCase() {
+		
+	}
+	
+}

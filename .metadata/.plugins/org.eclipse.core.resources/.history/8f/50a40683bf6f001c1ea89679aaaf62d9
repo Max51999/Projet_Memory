@@ -1,0 +1,7 @@
+package fr.ensma.a3.ia.agentcase;
+
+public class MediateurCase {
+
+	private PresentationCase presentation;
+	private IVueCase;
+}

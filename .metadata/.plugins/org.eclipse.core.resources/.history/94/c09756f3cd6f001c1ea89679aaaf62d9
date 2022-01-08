@@ -1,0 +1,31 @@
+package fr.ensma.a3.ia.agentplateau;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import fr.ensma.a3.ia.agentcase.PresentationCase;
+
+public class PresentationPlateau {
+
+	private IPresentationPlateau mediateur;
+	
+	private List<PresentationCase> liste;
+	
+	private Integer i;
+	
+	public PresentationPlateau() {
+		mediateur = new MediateurPlateau(this);
+		liste = new List<PresentationCase>();
+		for (i=0;i<9;i++) {
+			PresentationCase case1 = new PresentationCase();
+			liste[i] = case1;
+		}
+	}
+	
+	
+
+	public MediateurPlateau getMediateur() {
+		return (MediateurPlateau)mediateur;
+	}
+	
+}

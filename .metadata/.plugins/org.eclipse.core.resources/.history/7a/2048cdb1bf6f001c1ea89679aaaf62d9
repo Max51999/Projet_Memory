@@ -1,0 +1,23 @@
+package fr.ensma.a3.ia.agentcase;
+
+public class PresentationCase implements IPresentationCase {
+	
+	IPresentationCase mediateur;
+	
+	public PresentationCase() {
+		mediateur = new IPresentationCase();
+	}
+
+	
+	@Override
+	public VueCase getVue() {
+		return mediateur.getVue();
+	}
+
+
+	@Override
+	public void setCase() {
+		mediateur.setCase();
+	}
+	
+}

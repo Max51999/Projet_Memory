@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+/home/vitrym/Windows/A3/TP/Java/.metadata/.plugins/org.eclipse.jdt.core
+3456412987.index
+1865797976.index
+2434552220.index
+2220095397.index

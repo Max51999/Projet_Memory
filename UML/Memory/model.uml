@@ -17,10 +17,6 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TvlwUW1kEey7c91AvgJVyA" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TvlwUm1kEey7c91AvgJVyA" value="1"/>
         </ownedAttribute>
-        <ownedAttribute xmi:id="_a1b8MG1lEey7c91AvgJVyA" name="carte" visibility="private" type="_gwjpEG1gEey7c91AvgJVyA">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_a1b8MW1lEey7c91AvgJVyA"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_a1b8Mm1lEey7c91AvgJVyA" value="1"/>
-        </ownedAttribute>
         <ownedAttribute xmi:id="_alAeEG1mEey7c91AvgJVyA" name="numero_joueur" visibility="private" isStatic="true">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_alAeEW1mEey7c91AvgJVyA" value="1"/>
@@ -31,10 +27,31 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ccr3wW1uEey7c91AvgJVyA" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ccr3wm1uEey7c91AvgJVyA" value="1"/>
         </ownedAttribute>
+        <ownedAttribute xmi:id="_XdLSwHCNEeyCH-ZiaIsUTw" name="nom" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XdLSwXCNEeyCH-ZiaIsUTw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XdLSwnCNEeyCH-ZiaIsUTw" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_Yf1poHCNEeyCH-ZiaIsUTw" name="prenom" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Yf1poXCNEeyCH-ZiaIsUTw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Yf1ponCNEeyCH-ZiaIsUTw" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_eFwwUHCNEeyCH-ZiaIsUTw" name="mail" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eFwwUXCNEeyCH-ZiaIsUTw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eFwwUnCNEeyCH-ZiaIsUTw" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_k4HN4HCNEeyCH-ZiaIsUTw" name="pseudo" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_k4HN4XCNEeyCH-ZiaIsUTw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_k4HN4nCNEeyCH-ZiaIsUTw" value="1"/>
+        </ownedAttribute>
         <interfaceRealization xmi:id="_CvlPIG1oEey7c91AvgJVyA" client="_lN_6MG1fEey7c91AvgJVyA" supplier="_p0j8AG1nEey7c91AvgJVyA" contract="_p0j8AG1nEey7c91AvgJVyA"/>
-        <ownedOperation xmi:id="_WnP58G1kEey7c91AvgJVyA" name="choix_carte"/>
+        <ownedOperation xmi:id="_WnP58G1kEey7c91AvgJVyA" name="retourne_carte"/>
         <ownedOperation xmi:id="_X0vn0G1kEey7c91AvgJVyA" name="paire_trouvee"/>
         <ownedOperation xmi:id="_HkXy0G1zEey7c91AvgJVyA" name="reset"/>
+        <ownedOperation xmi:id="_yl8sUHCMEeyCH-ZiaIsUTw" name="revele"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_vk1q0G1iEey7c91AvgJVyA" name="joueursToIEtats" memberEnd="_vk1q0W1iEey7c91AvgJVyA _vk1q1G1iEey7c91AvgJVyA" navigableOwnedEnd="_vk1q1G1iEey7c91AvgJVyA">
         <ownedEnd xmi:id="_vk1q0W1iEey7c91AvgJVyA" name="joueurs" type="_lN_6MG1fEey7c91AvgJVyA" association="_vk1q0G1iEey7c91AvgJVyA">
@@ -51,6 +68,17 @@
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_4kvf4G10Eey7c91AvgJVyA" name="Joueur_simule" visibility="public">
         <generalization xmi:id="_8_4OcG10Eey7c91AvgJVyA" general="_lN_6MG1fEey7c91AvgJVyA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_CAGGIHCNEeyCH-ZiaIsUTw" name="ArrayList&lt;Cartes_classique >"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_LHbMIHCPEeyCH-ZiaIsUTw" memberEnd="_LHbMIXCPEeyCH-ZiaIsUTw _LHbMJHCPEeyCH-ZiaIsUTw" navigableOwnedEnd="_LHbMJHCPEeyCH-ZiaIsUTw">
+        <ownedEnd xmi:id="_LHbMIXCPEeyCH-ZiaIsUTw" name="abstract_joueurs" type="_lN_6MG1fEey7c91AvgJVyA" association="_LHbMIHCPEeyCH-ZiaIsUTw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LHbMInCPEeyCH-ZiaIsUTw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LHbMI3CPEeyCH-ZiaIsUTw" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:id="_LHbMJHCPEeyCH-ZiaIsUTw" name="cartes_classiques" type="_gwjpEG1gEey7c91AvgJVyA" aggregation="composite" association="_LHbMIHCPEeyCH-ZiaIsUTw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LHbMJXCPEeyCH-ZiaIsUTw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LHbMJnCPEeyCH-ZiaIsUTw" value="*"/>
+        </ownedEnd>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_jOcdQG1fEey7c91AvgJVyA" name="jeu">
@@ -76,6 +104,11 @@
         <ownedOperation xmi:id="_4lWOwG1yEey7c91AvgJVyA" name="ajout_joueur"/>
         <ownedOperation xmi:id="_oJWg8G1zEey7c91AvgJVyA" name="fin_partie"/>
         <ownedOperation xmi:id="_OHbv0G12Eey7c91AvgJVyA" name="ajout_carte"/>
+        <ownedOperation xmi:id="_e091IHCMEeyCH-ZiaIsUTw" name="choix_taille_plateau"/>
+        <ownedOperation xmi:id="_jFiScHCMEeyCH-ZiaIsUTw" name="choix_cartes_mystere"/>
+        <ownedOperation xmi:id="_oydZAHCMEeyCH-ZiaIsUTw" name="choix_nb_paire"/>
+        <ownedOperation xmi:id="_udqoUHCMEeyCH-ZiaIsUTw" name="revele"/>
+        <ownedOperation xmi:id="_1iCqAHCMEeyCH-ZiaIsUTw" name="melange"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_mHs3cG1hEey7c91AvgJVyA" name="Amulette" visibility="public">
         <generalization xmi:id="_JjFRUG1qEey7c91AvgJVyA" general="_GZx-EG1qEey7c91AvgJVyA"/>
@@ -167,6 +200,7 @@
       <packagedElement xmi:type="uml:Class" xmi:id="_GZx-EG1qEey7c91AvgJVyA" name="Abstract_decorateur" visibility="public" isAbstract="true">
         <interfaceRealization xmi:id="_PhBPYG1qEey7c91AvgJVyA" client="_GZx-EG1qEey7c91AvgJVyA" supplier="_KliM0G1qEey7c91AvgJVyA" contract="_KliM0G1qEey7c91AvgJVyA"/>
       </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Lcxb8HCNEeyCH-ZiaIsUTw" name="ArrayList&lt;Abstract_carte>  "/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_61KlAG1hEey7c91AvgJVyA" name="interaction">
       <packagedElement xmi:type="uml:Interface" xmi:id="_E3ovgG1iEey7c91AvgJVyA" name="IEtatJoueur" visibility="public">
@@ -182,10 +216,10 @@
       <packagedElement xmi:type="uml:Class" xmi:id="_PZ0U0G1iEey7c91AvgJVyA" name="Jeu" visibility="public">
         <generalization xmi:id="_Q6myIG1iEey7c91AvgJVyA" general="_JhHcEG1iEey7c91AvgJVyA"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Interface" xmi:id="_na5V8G1nEey7c91AvgJVyA" name="IObservable" visibility="public">
+      <packagedElement xmi:type="uml:Interface" xmi:id="_na5V8G1nEey7c91AvgJVyA" name="IObservableJoueur" visibility="public">
         <ownedOperation xmi:id="_xGaZAG1nEey7c91AvgJVyA" name="joueur_suivant"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Interface" xmi:id="_p0j8AG1nEey7c91AvgJVyA" name="IObservateur" visibility="public">
+      <packagedElement xmi:type="uml:Interface" xmi:id="_p0j8AG1nEey7c91AvgJVyA" name="IObservateurJoueur" visibility="public">
         <ownedOperation xmi:id="_ucbfAG1nEey7c91AvgJVyA" name="actualiser"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Interface" xmi:id="_KliM0G1qEey7c91AvgJVyA" name="ICarte" visibility="public"/>
@@ -201,6 +235,12 @@
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="__dJCcG1xEey7c91AvgJVyA" name="Retourne" visibility="public">
         <generalization xmi:id="_B1RXcG1yEey7c91AvgJVyA" general="_8Vet8G1xEey7c91AvgJVyA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_394k4HCNEeyCH-ZiaIsUTw" name="IObservableCarte" visibility="public">
+        <ownedOperation xmi:id="_E91NIHCOEeyCH-ZiaIsUTw" name="carte_retournee"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_6uWhYHCNEeyCH-ZiaIsUTw" name="IObservateurCarte" visibility="public">
+        <ownedOperation xmi:id="_C-aTEHCOEeyCH-ZiaIsUTw" name="actualiser"/>
       </packagedElement>
     </packagedElement>
   </packagedElement>

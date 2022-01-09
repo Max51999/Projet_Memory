@@ -19,7 +19,7 @@ public abstract class Abstract_joueur {
 	private String pseudo;
 	private Integer nb_cartes;
 	private Integer nb_tours;
-	protected static Integer numero_joueur = 1;
+	protected static Integer numero_joueur = 0;
 	private List<Carte_classique> liste_carte;
 	
 	/**
@@ -30,6 +30,7 @@ public abstract class Abstract_joueur {
 	 * @param nickname
 	 */
 	public Abstract_joueur(String name, String surname, String email, String nickname) {
+		numero_joueur += 1;
 		nom = surname;
 		prenom = name;
 		mail = email;
@@ -37,7 +38,6 @@ public abstract class Abstract_joueur {
 		id = "joueur" + numero_joueur;
 		nb_cartes = 0;
 		nb_tours = 1;
-		numero_joueur += 1;
 		liste_carte = new ArrayList<Carte_classique>();
 	}
 	
@@ -45,7 +45,7 @@ public abstract class Abstract_joueur {
 	 * Getter Nom
 	 * @return nom
 	 */
-	public String getNom() {
+	public final String getNom() {
 		return nom;
 	}
 	
@@ -53,7 +53,7 @@ public abstract class Abstract_joueur {
 	 * Getter Prenom
 	 * @return prenom
 	 */
-	public String getPrenom() {
+	public final String getPrenom() {
 		return prenom;
 	}
 	
@@ -61,15 +61,23 @@ public abstract class Abstract_joueur {
 	 * Getter Mail
 	 * @return mail
 	 */
-	public String getMail() {
+	public final String getMail() {
 		return mail;
+	}
+	
+	/**
+	 * Getter Pseudo
+	 * @return pseudo
+	 */
+	public final String getPseudo() {
+		return pseudo;
 	}
 	
 	/**
 	 * Getter Id
 	 * @return id
 	 */
-	public String getId() {
+	public final String getId() {
 		return id;
 	}
 	
@@ -77,7 +85,7 @@ public abstract class Abstract_joueur {
 	 * Getter Nombre de cartes
 	 * @return nb_cartes
 	 */
-	public Integer getNbCartes() {
+	public final Integer getNbCartes() {
 		return nb_cartes;
 	}
 	
@@ -85,7 +93,7 @@ public abstract class Abstract_joueur {
 	 * Getter Nombre de tours
 	 * @return nb_tours
 	 */
-	public Integer getNbTours() {
+	public final Integer getNbTours() {
 		return nb_tours;
 	}
 	
@@ -93,7 +101,7 @@ public abstract class Abstract_joueur {
 	 * Getter Numero du joueur
 	 * @return numero_joueur
 	 */
-	public Integer getNumJoueur() {
+	public final Integer getNumJoueur() {
 		return numero_joueur;
 	}
 	 
@@ -101,7 +109,7 @@ public abstract class Abstract_joueur {
 	 * Setter Nombre de cartes
 	 * @param cartes
 	 */
-	public void setNbCartes(Integer cartes) {
+	public final void setNbCartes(Integer cartes) {
 		nb_cartes = cartes;
 	}
 	
@@ -109,7 +117,7 @@ public abstract class Abstract_joueur {
 	 * Setter Nombre de tours
 	 * @param tours
 	 */
-	public void setNbTours(Integer tours) {
+	public final void setNbTours(Integer tours) {
 		nb_tours = tours;
 	}
 	

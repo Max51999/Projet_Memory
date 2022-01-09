@@ -201,6 +201,17 @@
         <interfaceRealization xmi:id="_PhBPYG1qEey7c91AvgJVyA" client="_GZx-EG1qEey7c91AvgJVyA" supplier="_KliM0G1qEey7c91AvgJVyA" contract="_KliM0G1qEey7c91AvgJVyA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_Lcxb8HCNEeyCH-ZiaIsUTw" name="ArrayList&lt;Abstract_carte>  "/>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_w4ZDoHFjEeyG1cFiWQmulg" name="ETaille" visibility="public">
+        <ownedLiteral xmi:id="_yCZ_sHFjEeyG1cFiWQmulg" name="petit">
+          <specification xmi:type="uml:LiteralInteger" xmi:id="_yCZ_sXFjEeyG1cFiWQmulg"/>
+        </ownedLiteral>
+        <ownedLiteral xmi:id="_zJY14HFjEeyG1cFiWQmulg" name="moyen">
+          <specification xmi:type="uml:LiteralInteger" xmi:id="_zJY14XFjEeyG1cFiWQmulg" value="1"/>
+        </ownedLiteral>
+        <ownedLiteral xmi:id="_0M46QHFjEeyG1cFiWQmulg" name="grand">
+          <specification xmi:type="uml:LiteralInteger" xmi:id="_0M46QXFjEeyG1cFiWQmulg" value="2"/>
+        </ownedLiteral>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_61KlAG1hEey7c91AvgJVyA" name="interaction">
       <packagedElement xmi:type="uml:Interface" xmi:id="_E3ovgG1iEey7c91AvgJVyA" name="IEtatJoueur" visibility="public">

@@ -1,8 +1,0 @@
-package fr.ensma.a3.ia.agentplateau;
-
-import javafx.scene.layout.GridPane;
-
-public class VuePlateau extends GridPane implements IVuePlateau {
-
-	public 
-}

@@ -100,6 +100,7 @@
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7byxEm1qEey7c91AvgJVyA" value="1"/>
         </ownedAttribute>
         <interfaceRealization xmi:id="_0_N2kG1nEey7c91AvgJVyA" client="_pr4awG1fEey7c91AvgJVyA" supplier="_na5V8G1nEey7c91AvgJVyA" contract="_na5V8G1nEey7c91AvgJVyA"/>
+        <interfaceRealization xmi:id="_sDtwMHLCEeylloYr1PLyEA" client="_pr4awG1fEey7c91AvgJVyA" supplier="_394k4HCNEeyCH-ZiaIsUTw" contract="_394k4HCNEeyCH-ZiaIsUTw"/>
         <ownedOperation xmi:id="_nEMioG1mEey7c91AvgJVyA" name="initialisation"/>
         <ownedOperation xmi:id="_4lWOwG1yEey7c91AvgJVyA" name="ajout_joueur"/>
         <ownedOperation xmi:id="_oJWg8G1zEey7c91AvgJVyA" name="fin_partie"/>
@@ -165,6 +166,7 @@
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8o2zYm1lEey7c91AvgJVyA" value="1"/>
           </ownedAttribute>
           <interfaceRealization xmi:id="_O7Po0G1qEey7c91AvgJVyA" client="_wquNcG1lEey7c91AvgJVyA" supplier="_KliM0G1qEey7c91AvgJVyA" contract="_KliM0G1qEey7c91AvgJVyA"/>
+          <interfaceRealization xmi:id="_61T8QHLCEeylloYr1PLyEA" client="_wquNcG1lEey7c91AvgJVyA" supplier="_6uWhYHCNEeyCH-ZiaIsUTw" contract="_6uWhYHCNEeyCH-ZiaIsUTw"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Association" xmi:id="_Pz1kEG1yEey7c91AvgJVyA" name="abstract_cartesToIEtatCartes" memberEnd="_Pz1kEW1yEey7c91AvgJVyA _Pz1kFG1yEey7c91AvgJVyA" navigableOwnedEnd="_Pz1kFG1yEey7c91AvgJVyA">
           <ownedEnd xmi:id="_Pz1kEW1yEey7c91AvgJVyA" name="abstract_cartes" type="_wquNcG1lEey7c91AvgJVyA" association="_Pz1kEG1yEey7c91AvgJVyA">
@@ -212,6 +214,16 @@
           <specification xmi:type="uml:LiteralInteger" xmi:id="_0M46QXFjEeyG1cFiWQmulg" value="2"/>
         </ownedLiteral>
       </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_3arBYHLCEeylloYr1PLyEA" name="plateau_jeusToIObservateurCartes" memberEnd="_3arBYXLCEeylloYr1PLyEA _3arBZHLCEeylloYr1PLyEA" navigableOwnedEnd="_3arBZHLCEeylloYr1PLyEA">
+        <ownedEnd xmi:id="_3arBYXLCEeylloYr1PLyEA" name="plateau_jeus" type="_pr4awG1fEey7c91AvgJVyA" association="_3arBYHLCEeylloYr1PLyEA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3arBYnLCEeylloYr1PLyEA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3arBY3LCEeylloYr1PLyEA" value="*"/>
+        </ownedEnd>
+        <ownedEnd xmi:id="_3arBZHLCEeylloYr1PLyEA" name="iObservateurCartes" type="_6uWhYHCNEeyCH-ZiaIsUTw" aggregation="shared" association="_3arBYHLCEeylloYr1PLyEA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3arBZXLCEeylloYr1PLyEA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3arBZnLCEeylloYr1PLyEA" value="*"/>
+        </ownedEnd>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_61KlAG1hEey7c91AvgJVyA" name="interaction">
       <packagedElement xmi:type="uml:Interface" xmi:id="_E3ovgG1iEey7c91AvgJVyA" name="IEtatJoueur" visibility="public">
@@ -233,7 +245,11 @@
       <packagedElement xmi:type="uml:Interface" xmi:id="_p0j8AG1nEey7c91AvgJVyA" name="IObservateurJoueur" visibility="public">
         <ownedOperation xmi:id="_ucbfAG1nEey7c91AvgJVyA" name="actualiser"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Interface" xmi:id="_KliM0G1qEey7c91AvgJVyA" name="ICarte" visibility="public"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_KliM0G1qEey7c91AvgJVyA" name="ICarte" visibility="public">
+        <ownedOperation xmi:id="_kcpRIHLCEeylloYr1PLyEA" name="amulette">
+          <ownedParameter xmi:id="_kcpRIXLCEeylloYr1PLyEA" name="carte" type="_KliM0G1qEey7c91AvgJVyA"/>
+        </ownedOperation>
+      </packagedElement>
       <packagedElement xmi:type="uml:Interface" xmi:id="_2e8YYG1xEey7c91AvgJVyA" name="IEtatCarte" visibility="public">
         <ownedOperation xmi:id="_5hbR8G1xEey7c91AvgJVyA" name="visible"/>
         <ownedOperation xmi:id="_6aQXYG1xEey7c91AvgJVyA" name="retourne"/>

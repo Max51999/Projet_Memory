@@ -27,7 +27,7 @@ public class AppPlateau extends Application implements IObserverCase {
 	        platPres = new PresentationPlateau();
 	        root.getChildren().add(platPres.getMediateur().getVue());
 	        
-	        scene = new Scene(root, 250, 100);
+	        scene = new Scene(root, 500, 500);
 	        stage.setScene(scene);
 	        stage.show();
 	    }

@@ -3,6 +3,9 @@ package fr.ensma.a3.ia.memory.joueur;
 import java.util.ArrayList;
 import java.util.List;
 
+import fr.ensma.a3.ia.memory.interaction.Attente;
+import fr.ensma.a3.ia.memory.interaction.IEtatJoueur;
+import fr.ensma.a3.ia.memory.interaction.Jeu;
 import fr.ensma.a3.ia.memory.jeu.carte.Carte_classique;
 
 /**
@@ -10,7 +13,7 @@ import fr.ensma.a3.ia.memory.jeu.carte.Carte_classique;
  * @author vitrym
  *
  */
-public abstract class Abstract_joueur {
+public abstract class Abstract_joueur implements IEtatJoueur {
 
 	private String id;
 	private String nom;
@@ -21,6 +24,10 @@ public abstract class Abstract_joueur {
 	private Integer nb_tours;
 	protected static Integer numero_joueur = 0;
 	private List<Carte_classique> liste_carte;
+	
+	private IEtatJoueur etat_courant;
+	private IEtatJoueur en_jeu = new Jeu(this);
+	private IEtatJoueur en_attente = new Attente(this);
 	
 	/**
 	 * Constructeur d'un joueur
@@ -39,6 +46,7 @@ public abstract class Abstract_joueur {
 		nb_cartes = 0;
 		nb_tours = 1;
 		liste_carte = new ArrayList<Carte_classique>();
+		etat_courant = en_attente;
 	}
 	
 	/**
@@ -150,6 +158,19 @@ public abstract class Abstract_joueur {
 	 */
 	public void revele() {
 		// TODO
+	}
+	
+	
+	@Override
+	public void attente() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void jeu() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

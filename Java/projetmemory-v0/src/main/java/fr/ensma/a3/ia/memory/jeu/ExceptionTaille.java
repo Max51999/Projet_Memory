@@ -1,6 +1,10 @@
 package fr.ensma.a3.ia.memory.jeu;
 
-
+/**
+ * 
+ * @author vitrym
+ *
+ */
 public class ExceptionTaille extends Exception {
 
 private String monMessage;

@@ -1,5 +1,10 @@
 package fr.ensma.a3.ia.memory.joueur;
 
+/**
+ * 
+ * @author vitrym
+ *
+ */
 public class Joueur_simule extends Abstract_joueur {
 
 	public Joueur_simule() {

@@ -9,7 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
 
-public class AppPlateau extends Application implements IObserverCase {
+public class AppPlateau extends Application {
 
 		private Scene scene;
 		private FlowPane root;
@@ -21,6 +21,8 @@ public class AppPlateau extends Application implements IObserverCase {
 	    public void start(Stage stage) {
 
 	    	stage.setTitle("Test Case");
+	    	stage.setMinWidth(500);
+	    	stage.setMinHeight(500);
 	    	root = new FlowPane(Orientation.HORIZONTAL);
 	        root.setAlignment(Pos.TOP_CENTER);
 	    	
@@ -36,11 +38,6 @@ public class AppPlateau extends Application implements IObserverCase {
 	        launch();
 	    }
 
-		@Override
-		public void clique() {
-			System.out.println("Changement de symbole");
-			
-		}
 
 	}
 

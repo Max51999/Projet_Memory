@@ -16,7 +16,7 @@ import javafx.stage.Stage;
 /**
  * JavaFX App
  */
-public class App extends Application implements IObserverCase {
+public class App extends Application {
 
 	private Scene scene;
 	private FlowPane root;
@@ -43,10 +43,6 @@ public class App extends Application implements IObserverCase {
         launch();
     }
 
-	@Override
-	public void clique() {
-		System.out.println("Changement de symbole");
-		
-	}
+	
 
 }

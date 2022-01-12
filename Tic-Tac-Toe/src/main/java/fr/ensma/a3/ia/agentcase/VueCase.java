@@ -30,7 +30,6 @@ public class VueCase extends Button implements IVueCase, EventHandler<ActionEven
 	@Override
 	public void handle(ActionEvent event) {
 		mediateur.change();
-		
 	}
 
 	@Override

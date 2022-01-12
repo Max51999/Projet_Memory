@@ -18,7 +18,7 @@ public class VuePlateau extends GridPane implements IVuePlateau {
 		k = 0;
 		for (i=0;i<3;i++) {
 			for (j=0;j<3;j++) {
-				add(mediateur.getPresentation().getCase(k).getMediateur().getVue(),i,j);
+				add(mediateur.getPresentation().getCase(k).getMediateur().getVue(),j,i);
 				k++;
 			}
 		}

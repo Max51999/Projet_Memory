@@ -4,14 +4,12 @@
     <fullyQualifiedTypeName name="javafx.scene.image.ImageView"/>
     <fullyQualifiedTypeName name="fr.ensma.a3.ia.agentcase.VueCase"/>
     <fullyQualifiedTypeName name="fr.ensma.a3.ia.agentcase.IVueCase"/>
-    <fullyQualifiedTypeName name="fr.ensma.a3.ia.agentcase.IObserverCase"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="fr.ensma.a3.ia.agentcase.MediateurCase"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="fr.ensma.a3.ia.agentplateau.IVuePlateau"/>
     <fullyQualifiedTypeName name="fr.ensma.a3.ia.agentcase.IPresentationCase"/>
     <fullyQualifiedTypeName name="fr.ensma.a3.ia.agentplateau.IPresentationPlateau"/>
-    <fullyQualifiedTypeName name="fr.ensma.a3.ia.agentplateau.PresentationPlateau"/>
     <fullyQualifiedTypeName name="fr.ensma.a3.ia.agentplateau.MediateurPlateau"/>
     <fullyQualifiedTypeName name="fr.ensma.a3.ia.agentplateau.VuePlateau"/>
     <fullyQualifiedTypeName name="fr.ensma.a3.ia.agentcase.PresentationCase"/>
@@ -39,4 +37,14 @@
     <fullyQualifiedTypeName name="fr.ensma.a3.ia.memory.jeu.carte.Abstract_carte"/>
     <fullyQualifiedTypeName name="fr.ensma.a3.ia.memory.interaction.Etat_carte"/>
     <fullyQualifiedTypeName name="fr.ensma.a3.ia.memory.interaction.IEtatCarte"/>
+    <fullyQualifiedTypeName name="javafx.event.EventHandler"/>
+    <fullyQualifiedTypeName name="javafx.event.ActionEvent"/>
+    <fullyQualifiedTypeName name="fr.ensma.a3.ia.agentcase.IObserverCase"/>
+    <fullyQualifiedTypeName name="fr.ensma.a3.ia.agentplateau.PresentationPlateau"/>
+    <fullyQualifiedTypeName name="fr.ensma.a3.ia.agentplateau.IObservableCase"/>
+    <fullyQualifiedTypeName name="fr.ensma.a3.ia.maquettegraphique.connexionserveur.vbox.hbox.label.VueLabelId"/>
+    <fullyQualifiedTypeName name="fr.ensma.a3.ia.maquettegraphique.connexionserveur.vbox.hbox.label.ModeleLabelId"/>
+    <fullyQualifiedTypeName name="java.lang.Process"/>
+    <fullyQualifiedTypeName name="fr.ensma.a3.ia.maquettegraphique.connexionserveur.vbox.hbox.label.PresentationLabelId"/>
+    <fullyQualifiedTypeName name="fr.ensma.a3.ia.maquettegraphique.connexionserveur.vbox.hbox.label.IVueLabelId"/>
 </qualifiedTypeNameHistroy>

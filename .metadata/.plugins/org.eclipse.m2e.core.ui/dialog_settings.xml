@@ -2,6 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="/home/vitrym/Documents/TP/Projet_Memory/MaquetteGraphique"/>
+			<item value="/home/vitrym/Documents/TP/Projet_Memory/Tic-Tac-Toe"/>
 			<item value="C:\Users\maxvi\Desktop\Ecole\Inge\A3\TP\Tic_Tac_Toe"/>
 			<item value="C:\Users\maxvi\Desktop\Ecole\Inge\A3\TP\Tic-Tac-Toe"/>
 			<item value="C:\Users\maxvi\Desktop\Ecole\Inge\A3\Conception_Logiciel\Jeu-Personnage"/>

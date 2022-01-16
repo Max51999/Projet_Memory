@@ -3,6 +3,7 @@ package fr.ensma.a3.ia.carnetadressesdao;
 import java.util.List;
 import java.util.Optional;
 
+import fr.ensma.a3.ia.carnetadressesdao.business.Adresse;
 import fr.ensma.a3.ia.carnetadressesdao.business.Carnet_Adresses;
 import fr.ensma.a3.ia.carnetadressesdao.business.Personne;
 import fr.ensma.a3.ia.carnetadressesdao.dao.AdressePoiDAO;
@@ -21,12 +22,12 @@ public class App
     {
     	
     	/*System.out.println("Elements dans la base :");*/
-    	IDao<AdresseEntity> adrdao = new AdressePoiDAO();/*
+    	/*IDao<AdresseEntity> adrdao = new AdressePoiDAO();/*
     	List<AdresseEntity> alladr = adrdao.getAll();
     	for(AdresseEntity ad : alladr) {
     		System.out.println(ad);
     	}*/
-    	AdresseEntity adcherche = new AdresseEntity();
+    	/*AdresseEntity adcherche = new AdresseEntity();
     	adcherche.setNumRue(12);
     	adcherche.setNomRue("rue toulent");
     	adcherche.setCodePostal(91000);
@@ -65,7 +66,9 @@ public class App
     	}
     	
     	System.out.println("Elements dans la base :");*/
-    	IDao<PersonneEntity> persdao = new PersonnePoiDAO();/*
+    	/*IDao<PersonneEntity> persdao = new PersonnePoiDAO();
+    	persdao.delete(persdao.getById(3).get());
+    	/*
     	List<PersonneEntity> allpers = persdao.getAll();
     	for(PersonneEntity pers : allpers) {
     		System.out.println(pers);
@@ -84,7 +87,7 @@ public class App
     	if(re.isPresent()) {
     		System.out.println(re.get());
     	}*/
-    	persdao.delete(persdao.getById(3).get());
+    	/*persdao.delete(persdao.getById(3).get());
     	PersonneEntity persajout = new PersonneEntity();
     	persajout.setNomPers("NOM");
     	persajout.setPrenomPers("Prenom");
@@ -111,16 +114,19 @@ public class App
     	
     	Carnet_Adresses carnet = new Carnet_Adresses();
     	carnet.lister();
-    	
-    	Personne personne = new Personne(persajout);
+    	Adresse adresse = new Adresse(10, "rue", "ville", 86000);
+    	Personne personne = new Personne("Nom","Prenom",adresse);
     	
     	carnet.ajouter(personne);
-    	carnet.lister();
     	
-    	Personne personne2 = new Personne(persajout);
-    	personne2.setPrenomPers("NewPrenom");
+    	
+    	
+    	
+    	Adresse adresse2 = new Adresse(10, "newrue", "newville", 87000);
+    	Personne personne2 = new Personne("Nom","Prenom",adresse2);
+    	
     	carnet.modifier(personne, personne2);
-    	carnet.lister();
+    	
     	
     	carnet.supprimer(personne2);
     	carnet.lister();

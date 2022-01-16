@@ -47,4 +47,11 @@
     <fullyQualifiedTypeName name="java.lang.Process"/>
     <fullyQualifiedTypeName name="fr.ensma.a3.ia.maquettegraphique.connexionserveur.vbox.hbox.label.PresentationLabelId"/>
     <fullyQualifiedTypeName name="fr.ensma.a3.ia.maquettegraphique.connexionserveur.vbox.hbox.label.IVueLabelId"/>
+    <fullyQualifiedTypeName name="fr.ensma.a3.ia.maquettegraphique.plateau.agentplateau.IObservableCarte"/>
+    <fullyQualifiedTypeName name="fr.ensma.a3.ia.maquettegraphique.plateau.agentcarte.IObserverCarte"/>
+    <fullyQualifiedTypeName name="fr.ensma.a3.ia.maquettegraphique.plateau.agentscore.VueScore"/>
+    <fullyQualifiedTypeName name="fr.ensma.a3.ia.maquettegraphique.plateau.agentscore.IVueScore"/>
+    <fullyQualifiedTypeName name="fr.ensma.a3.ia.maquettegraphique.plateau.agentplateau.PresentationPlateau"/>
+    <fullyQualifiedTypeName name="fr.ensma.a3.ia.maquettegraphique.plateau.agentscore.PresentationScore"/>
+    <fullyQualifiedTypeName name="javafx.scene.layout.HBox"/>
 </qualifiedTypeNameHistroy>

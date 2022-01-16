@@ -57,8 +57,8 @@ public class PersonneEntity {
 			return false;
 		} else {
 			PersonneEntity pers = (PersonneEntity) obj;
-			if ((pers.getNomPers() == nomPers) && (pers.getPrenomPers().compareTo(prenomPers) == 0)
-					&& (pers.getAdressePers_FK()) == adressePers_FK) {
+			if ((pers.getNomPers().compareTo(nomPers) == 0) && (pers.getPrenomPers().compareTo(prenomPers) == 0) 
+					&& (pers.getAdressePers_FK() == adressePers_FK)) {
 				return true;
 			} else {
 				return false;

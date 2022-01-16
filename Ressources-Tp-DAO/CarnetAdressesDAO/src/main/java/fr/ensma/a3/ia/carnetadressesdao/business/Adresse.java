@@ -12,11 +12,12 @@ public class Adresse {
 	private int codePostal;
 	
 	
-	public Adresse(AdresseEntity ad) {
-		numRue = ad.getNumRue();
-		nomRue = ad.getNomRue();
-		nomVille = ad.getNomVille();
-		codePostal = ad.getCodePostal();
+	
+	public Adresse(int num, String rue, String ville, int code) {
+		numRue = num;
+		nomRue = rue;
+		nomVille = ville;
+		codePostal = code;
 	}
 	
 	public final int getNumRue() {

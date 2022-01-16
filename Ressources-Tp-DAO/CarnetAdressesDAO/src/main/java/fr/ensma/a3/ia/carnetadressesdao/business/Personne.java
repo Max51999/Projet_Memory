@@ -13,20 +13,11 @@ public class Personne {
 	private String prenomPers;
 	private Adresse adresse;
 	
-	private IDao<AdresseEntity> adrdao = new AdressePoiDAO();
 	
-	public Personne(PersonneEntity pers) {
-		nomPers = pers.getNomPers();
-		prenomPers = pers.getPrenomPers();
-		int idadr = pers.getAdressePers_FK();
-		
-		Optional<AdresseEntity> ad = adrdao.getById(idadr);
-		
-		if (ad.isPresent()) {
-			adresse = new Adresse(ad.get());
-		} else {
-			adresse = null;
-		}
+	public Personne(String nom, String prenom, Adresse adr) {
+		nomPers = nom;
+		prenomPers = prenom;
+		adresse = adr;
 	}
 	
 	public final String getNomPers() {

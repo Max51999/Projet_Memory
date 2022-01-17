@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_53Q5sW1eEey7c91AvgJVyA" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_53Q5sm1eEey7c91AvgJVyA" bindingContexts="_53Q5uG1eEey7c91AvgJVyA">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workbench>&#xA;&lt;mruList>&#xA;&lt;file factoryID=&quot;org.eclipse.sirius.ui.business.api.session.SessionEditorInputFactory&quot; id=&quot;org.eclipse.sirius.diagram.ui.part.SiriusDiagramEditorID&quot; name=&quot;memory-classes&quot; tooltip=&quot;platform:/resource/Memory/representations.aird/memory-classes&quot;>&#xA;&lt;persistable REP_DESC_URI=&quot;platform:/resource/Memory/representations.aird#_VqvnsG1fEey7c91AvgJVyA&quot; SESSION_RESOURCE_URI=&quot;platform:/resource/Memory/representations.aird&quot; bundle=&quot;org.eclipse.sirius.ui&quot; class=&quot;org.eclipse.sirius.ui.business.api.session.SessionEditorInput&quot; name=&quot;memory-classes&quot; uri=&quot;platform:/resource/Memory/representations.aird#_VsVjIW1fEey7c91AvgJVyA&quot;/>&#xA;&lt;/file>&#xA;&lt;/mruList>&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.sirius.ui.business.api.session.SessionEditorInputFactory&quot; id=&quot;org.eclipse.sirius.diagram.ui.part.SiriusDiagramEditorID&quot; name=&quot;couche-persistance&quot; tooltip=&quot;platform:/resource/Couche_Persistance/representations.aird/couche-persistance&quot;>&#xD;&#xA;&lt;persistable REP_DESC_URI=&quot;platform:/resource/Couche_Persistance/representations.aird#_dbiBAXezEeyTJ78vxNpE4w&quot; SESSION_RESOURCE_URI=&quot;platform:/resource/Couche_Persistance/representations.aird&quot; bundle=&quot;org.eclipse.sirius.ui&quot; class=&quot;org.eclipse.sirius.ui.business.api.session.SessionEditorInput&quot; name=&quot;couche-persistance&quot; uri=&quot;platform:/resource/Couche_Persistance/representations.aird#_dbiBA3ezEeyTJ78vxNpE4w&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.sirius.ui.business.api.session.SessionEditorInputFactory&quot; id=&quot;org.eclipse.sirius.diagram.ui.part.SiriusDiagramEditorID&quot; name=&quot;NewModel Class Diagram&quot; tooltip=&quot;platform:/resource/Couche_Persistance/representations.aird/NewModel Class Diagram&quot;>&#xD;&#xA;&lt;persistable REP_DESC_URI=&quot;platform:/resource/Couche_Persistance/representations.aird#_acQzgHezEeyTJ78vxNpE4w&quot; SESSION_RESOURCE_URI=&quot;platform:/resource/Couche_Persistance/representations.aird&quot; bundle=&quot;org.eclipse.sirius.ui&quot; class=&quot;org.eclipse.sirius.ui.business.api.session.SessionEditorInput&quot; name=&quot;NewModel Class Diagram&quot; uri=&quot;platform:/resource/Couche_Persistance/representations.aird#_acZWYXezEeyTJ78vxNpE4w&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.amalgam.explorer.activity.ui.internal.ActivityExplorerEditorInputFactory&quot; id=&quot;org.eclipse.amalgam.explorer.activity.ui.editor.activityExplorerEditor&quot; name=&quot;&amp;lt;Model&amp;gt; NewModel&quot; tooltip=&quot;&amp;lt;Model&amp;gt; NewModel&quot;>&#xD;&#xA;&lt;persistable activityExplorerFile=&quot;/Memory/representations.aird&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.sirius.ui.business.api.session.SessionEditorInputFactory&quot; id=&quot;org.eclipse.sirius.diagram.ui.part.SiriusDiagramEditorID&quot; name=&quot;memory-classes&quot; tooltip=&quot;platform:/resource/Memory/representations.aird/memory-classes&quot;>&#xD;&#xA;&lt;persistable REP_DESC_URI=&quot;platform:/resource/Memory/representations.aird#_VqvnsG1fEey7c91AvgJVyA&quot; SESSION_RESOURCE_URI=&quot;platform:/resource/Memory/representations.aird&quot; bundle=&quot;org.eclipse.sirius.ui&quot; class=&quot;org.eclipse.sirius.ui.business.api.session.SessionEditorInput&quot; name=&quot;memory-classes&quot; uri=&quot;platform:/resource/Memory/representations.aird#_VsVjIW1fEey7c91AvgJVyA&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
   <children xsi:type="basic:TrimmedWindow" xmi:id="_53Q5sm1eEey7c91AvgJVyA" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_6WDHcm1eEey7c91AvgJVyA" x="960" y="27" width="966" height="1045">
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
     <persistedState key="isRestored" value="true"/>
-    <persistedState key="show_in_time" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;show_in_time/>"/>
-    <persistedState key="workingSets" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workingSets/>"/>
+    <persistedState key="show_in_time" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;show_in_time/>"/>
+    <persistedState key="workingSets" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workingSets/>"/>
     <persistedState key="aggregateWorkingSetId"/>
     <tags>topLevel</tags>
+    <tags>shellMaximized</tags>
     <children xsi:type="basic:PartSashContainer" xmi:id="_6WDHcm1eEey7c91AvgJVyA" selectedElement="_6WDHc21eEey7c91AvgJVyA" horizontal="true">
       <children xsi:type="advanced:PerspectiveStack" xmi:id="_6WDHc21eEey7c91AvgJVyA" elementId="org.eclipse.ui.ide.perspectivestack" containerData="7500" selectedElement="_6wC70G1eEey7c91AvgJVyA">
         <children xsi:type="advanced:Perspective" xmi:id="_6wC70G1eEey7c91AvgJVyA" elementId="org.eclipse.sirius.ui.tools.perspective.modeling" selectedElement="_6wC70W1eEey7c91AvgJVyA" label="Modeling" iconURI="platform:/plugin/org.eclipse.sirius.ui.ext/icons/full/others/ModelingPerspective.gif">
@@ -36,6 +37,7 @@
           <children xsi:type="basic:PartSashContainer" xmi:id="_6wC70W1eEey7c91AvgJVyA" selectedElement="_6wDi5G1eEey7c91AvgJVyA" horizontal="true">
             <children xsi:type="basic:PartSashContainer" xmi:id="_6wC70m1eEey7c91AvgJVyA" containerData="2500" selectedElement="_6wDi4G1eEey7c91AvgJVyA">
               <children xsi:type="basic:PartStack" xmi:id="_6wDi4G1eEey7c91AvgJVyA" elementId="org.eclipse.sirius.ui.tools.views.model.explorerMStack" containerData="5000" selectedElement="_6wDi4W1eEey7c91AvgJVyA">
+                <tags>noFocus</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_6wDi4W1eEey7c91AvgJVyA" elementId="org.eclipse.sirius.ui.tools.views.model.explorer" ref="_6v9cQG1eEey7c91AvgJVyA"/>
               </children>
               <children xsi:type="basic:PartStack" xmi:id="_6wDi4m1eEey7c91AvgJVyA" elementId="org.eclipse.ui.views.ContentOutlineMStack" containerData="5000" selectedElement="_6wDi421eEey7c91AvgJVyA">
@@ -82,13 +84,19 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_6v5x4G1eEey7c91AvgJVyA" elementId="org.eclipse.ui.editorss" selectedElement="_6v5x4W1eEey7c91AvgJVyA">
-      <children xsi:type="basic:PartStack" xmi:id="_6v5x4W1eEey7c91AvgJVyA" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_WBy1wG1fEey7c91AvgJVyA">
+      <children xsi:type="basic:PartStack" xmi:id="_6v5x4W1eEey7c91AvgJVyA" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_dcY8oHezEeyTJ78vxNpE4w">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
         <tags>active</tags>
-        <tags>noFocus</tags>
         <children xsi:type="basic:Part" xmi:id="_WBy1wG1fEey7c91AvgJVyA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="memory-classes" iconURI="platform:/plugin/org.eclipse.sirius.diagram.ui/icons/DDiagram.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.sirius.diagram.ui.part.SiriusDiagramEditorID&quot; name=&quot;memory-classes&quot; partName=&quot;memory-classes&quot; title=&quot;memory-classes&quot; tooltip=&quot;platform:/resource/Memory/representations.aird/memory-classes&quot;>&#xA;&lt;input REP_DESC_URI=&quot;platform:/resource/Memory/representations.aird#_VqvnsG1fEey7c91AvgJVyA&quot; SESSION_RESOURCE_URI=&quot;platform:/resource/Memory/representations.aird&quot; bundle=&quot;org.eclipse.sirius.ui&quot; class=&quot;org.eclipse.sirius.ui.business.api.session.SessionEditorInput&quot; factoryID=&quot;org.eclipse.sirius.ui.business.api.session.SessionEditorInputFactory&quot; name=&quot;memory-classes&quot; uri=&quot;platform:/resource/Memory/representations.aird#_VsVjIW1fEey7c91AvgJVyA&quot;/>&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.sirius.diagram.ui.part.SiriusDiagramEditorID&quot; name=&quot;memory-classes&quot; partName=&quot;memory-classes&quot; title=&quot;memory-classes&quot; tooltip=&quot;platform:/resource/Memory/representations.aird/memory-classes&quot;>&#xD;&#xA;&lt;input REP_DESC_URI=&quot;platform:/resource/Memory/representations.aird#_VqvnsG1fEey7c91AvgJVyA&quot; SESSION_RESOURCE_URI=&quot;platform:/resource/Memory/representations.aird&quot; bundle=&quot;org.eclipse.sirius.ui&quot; class=&quot;org.eclipse.sirius.ui.business.api.session.SessionEditorInput&quot; factoryID=&quot;org.eclipse.sirius.ui.business.api.session.SessionEditorInputFactory&quot; name=&quot;memory-classes&quot; uri=&quot;platform:/resource/Memory/representations.aird#_VsVjIW1fEey7c91AvgJVyA&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>org.eclipse.sirius.diagram.ui.part.SiriusDiagramEditorID</tags>
+          <tags>removeOnHide</tags>
+          <tags>activeOnClose</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_dcY8oHezEeyTJ78vxNpE4w" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="couche-persistance" iconURI="platform:/plugin/org.eclipse.sirius.diagram.ui/icons/DDiagram.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.sirius.diagram.ui.part.SiriusDiagramEditorID&quot; name=&quot;couche-persistance&quot; partName=&quot;couche-persistance&quot; title=&quot;couche-persistance&quot; tooltip=&quot;platform:/resource/Couche_Persistance/representations.aird/couche-persistance&quot;>&#xD;&#xA;&lt;input REP_DESC_URI=&quot;platform:/resource/Couche_Persistance/representations.aird#_dbiBAXezEeyTJ78vxNpE4w&quot; SESSION_RESOURCE_URI=&quot;platform:/resource/Couche_Persistance/representations.aird&quot; bundle=&quot;org.eclipse.sirius.ui&quot; class=&quot;org.eclipse.sirius.ui.business.api.session.SessionEditorInput&quot; factoryID=&quot;org.eclipse.sirius.ui.business.api.session.SessionEditorInputFactory&quot; name=&quot;couche-persistance&quot; uri=&quot;platform:/resource/Couche_Persistance/representations.aird#_dbiBA3ezEeyTJ78vxNpE4w&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.sirius.diagram.ui.part.SiriusDiagramEditorID</tags>
           <tags>removeOnHide</tags>
@@ -100,7 +108,7 @@
     <sharedElements xsi:type="basic:Part" xmi:id="_6v9cQG1eEey7c91AvgJVyA" elementId="org.eclipse.sirius.ui.tools.views.model.explorer" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Model Explorer" iconURI="platform:/plugin/org.eclipse.sirius.ui.ext/icons/full/others/ModelExplorer.gif" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.sirius.ui.tools.internal.views.modelexplorer.ModelExplorerView"/>
       <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.sirius.ui.ext"/>
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot; org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets=&quot;0&quot;>&#xA;&lt;lastRecentlyUsedFilters/>&#xA;&lt;/view>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot; org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets=&quot;0&quot;>&#xD;&#xA;&lt;lastRecentlyUsedFilters/>&#xD;&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:Sirius</tags>
       <menus xmi:id="_6yQiUG1eEey7c91AvgJVyA" elementId="org.eclipse.sirius.ui.tools.views.model.explorer">
@@ -112,7 +120,7 @@
     <sharedElements xsi:type="basic:Part" xmi:id="_6v_RcG1eEey7c91AvgJVyA" elementId="org.eclipse.ui.views.ContentOutline" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Outline" iconURI="platform:/plugin/org.eclipse.ui.views/icons/full/eview16/outline_co.png" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.views.contentoutline.ContentOutline"/>
       <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui.views"/>
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
       <menus xmi:id="_65yGoG1eEey7c91AvgJVyA" elementId="org.eclipse.ui.views.ContentOutline">
@@ -124,7 +132,7 @@
     <sharedElements xsi:type="basic:Part" xmi:id="_6v_4gG1eEey7c91AvgJVyA" elementId="org.eclipse.ui.views.PropertySheet" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Properties" iconURI="platform:/plugin/org.eclipse.ui.views/icons/full/eview16/prop_ps.png" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.views.properties.PropertySheet"/>
       <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui.views"/>
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
       <menus xmi:id="_66WHUG1eEey7c91AvgJVyA" elementId="org.eclipse.ui.views.PropertySheet">
@@ -146,7 +154,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_6ZeO4G1eEey7c91AvgJVyA" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_6ZjHYG1eEey7c91AvgJVyA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_54UpvG1eEey7c91AvgJVyA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_AqnaYHezEeyTJ78vxNpE4w" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_54UpvG1eEey7c91AvgJVyA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_6Ze18G1eEey7c91AvgJVyA" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -164,7 +172,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_6Ze19G1eEey7c91AvgJVyA" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_6Zjuc21eEey7c91AvgJVyA" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_54Tby21eEey7c91AvgJVyA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_Aqrr0HezEeyTJ78vxNpE4w" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_54Tby21eEey7c91AvgJVyA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_6Ze19W1eEey7c91AvgJVyA" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -207,9 +215,6 @@
     <trimBars xmi:id="_53Q5tm1eEey7c91AvgJVyA" elementId="org.eclipse.ui.trim.vertical2" contributorURI="platform:/plugin/org.eclipse.ui.workbench" side="Right"/>
   </children>
   <bindingTables xmi:id="_53Q5t21eEey7c91AvgJVyA" contributorURI="platform:/plugin/org.eclipse.ui.workbench" bindingContext="_53Q5uG1eEey7c91AvgJVyA">
-    <bindings xmi:id="_55EQj21eEey7c91AvgJVyA" keySequence="ALT+F11" command="_54S0gG1eEey7c91AvgJVyA">
-      <tags>platform:gtk</tags>
-    </bindings>
     <bindings xmi:id="_55EQkm1eEey7c91AvgJVyA" keySequence="SHIFT+INSERT" command="_54Rmgm1eEey7c91AvgJVyA"/>
     <bindings xmi:id="_55E3k21eEey7c91AvgJVyA" keySequence="ALT+PAGE_UP" command="_54V36m1eEey7c91AvgJVyA"/>
     <bindings xmi:id="_55E3lG1eEey7c91AvgJVyA" keySequence="ALT+PAGE_DOWN" command="_54Tbgm1eEey7c91AvgJVyA"/>
@@ -218,9 +223,6 @@
     <bindings xmi:id="_55Ferm1eEey7c91AvgJVyA" keySequence="CTRL+SPACE" command="_54UCtm1eEey7c91AvgJVyA"/>
     <bindings xmi:id="_55GFwG1eEey7c91AvgJVyA" keySequence="CTRL+A" command="_54VQ4m1eEey7c91AvgJVyA"/>
     <bindings xmi:id="_55GFw21eEey7c91AvgJVyA" keySequence="CTRL+C" command="_54Q_V21eEey7c91AvgJVyA"/>
-    <bindings xmi:id="_55Gsym1eEey7c91AvgJVyA" keySequence="CTRL+SHIFT+Z" command="_54V30W1eEey7c91AvgJVyA">
-      <tags>platform:gtk</tags>
-    </bindings>
     <bindings xmi:id="_55HT2m1eEey7c91AvgJVyA" keySequence="CTRL+1" command="_54Tbw21eEey7c91AvgJVyA"/>
     <bindings xmi:id="_55H65m1eEey7c91AvgJVyA" keySequence="CTRL+SHIFT+I" command="_54TboW1eEey7c91AvgJVyA"/>
     <bindings xmi:id="_55H67G1eEey7c91AvgJVyA" keySequence="CTRL+SHIFT+L" command="_54VQum1eEey7c91AvgJVyA"/>
@@ -231,6 +233,10 @@
     <bindings xmi:id="_55KXK21eEey7c91AvgJVyA" keySequence="CTRL+INSERT" command="_54Q_V21eEey7c91AvgJVyA"/>
     <bindings xmi:id="_55K-M21eEey7c91AvgJVyA" keySequence="ALT+SHIFT+F3" command="_54Upym1eEey7c91AvgJVyA"/>
     <bindings xmi:id="_55MMVW1eEey7c91AvgJVyA" keySequence="CTRL+F10" command="_54SNcG1eEey7c91AvgJVyA"/>
+    <bindings xmi:id="_AKZCMXezEeyTJ78vxNpE4w" keySequence="ALT+F11" command="_54S0gG1eEey7c91AvgJVyA">
+      <tags>platform:win32</tags>
+    </bindings>
+    <bindings xmi:id="_AKd6sHezEeyTJ78vxNpE4w" keySequence="CTRL+Y" command="_54V30W1eEey7c91AvgJVyA"/>
   </bindingTables>
   <bindingTables xmi:id="_54_YAG1eEey7c91AvgJVyA" elementId="org.eclipse.ui.textEditorScope" bindingContext="_54aJMG1eEey7c91AvgJVyA">
     <bindings xmi:id="_55DpcG1eEey7c91AvgJVyA" keySequence="END" command="_54Up5m1eEey7c91AvgJVyA"/>
@@ -313,9 +319,6 @@
     <bindings xmi:id="_55GFt21eEey7c91AvgJVyA" keySequence="ALT+SHIFT+D P" command="_54UptG1eEey7c91AvgJVyA"/>
     <bindings xmi:id="_55GFwW1eEey7c91AvgJVyA" keySequence="ALT+SHIFT+D E" command="_54V36W1eEey7c91AvgJVyA"/>
     <bindings xmi:id="_55GFwm1eEey7c91AvgJVyA" keySequence="CTRL+B" command="_54RmiW1eEey7c91AvgJVyA"/>
-    <bindings xmi:id="_55GswW1eEey7c91AvgJVyA" keySequence="ALT+CTRL+U" command="_54Tbh21eEey7c91AvgJVyA">
-      <tags>platform:gtk</tags>
-    </bindings>
     <bindings xmi:id="_55Gswm1eEey7c91AvgJVyA" keySequence="CTRL+E" command="_54UCy21eEey7c91AvgJVyA"/>
     <bindings xmi:id="_55Gsw21eEey7c91AvgJVyA" keySequence="CTRL+F" command="_54S0eW1eEey7c91AvgJVyA"/>
     <bindings xmi:id="_55GsxW1eEey7c91AvgJVyA" keySequence="CTRL+G" command="_54Q_Tm1eEey7c91AvgJVyA"/>
@@ -423,6 +426,7 @@
     <bindings xmi:id="_55MMUW1eEey7c91AvgJVyA" keySequence="CTRL+F7" command="_54Q_WG1eEey7c91AvgJVyA"/>
     <bindings xmi:id="_55MMUm1eEey7c91AvgJVyA" keySequence="CTRL+F8" command="_54TbyG1eEey7c91AvgJVyA"/>
     <bindings xmi:id="_55MMV21eEey7c91AvgJVyA" keySequence="CTRL+F11" command="_54Up6W1eEey7c91AvgJVyA"/>
+    <bindings xmi:id="_AKbecHezEeyTJ78vxNpE4w" keySequence="CTRL+SHIFT+U" command="_54Tbh21eEey7c91AvgJVyA"/>
   </bindingTables>
   <bindingTables xmi:id="_55DpdW1eEey7c91AvgJVyA" elementId="org.eclipse.ant.ui.AntEditorScope" bindingContext="_54aJRG1eEey7c91AvgJVyA">
     <bindings xmi:id="_55Dpdm1eEey7c91AvgJVyA" keySequence="F3" command="_54RmW21eEey7c91AvgJVyA"/>
@@ -516,7 +520,9 @@
     <bindings xmi:id="_55GFvW1eEey7c91AvgJVyA" keySequence="CTRL+O" command="_54Tbs21eEey7c91AvgJVyA"/>
   </bindingTables>
   <bindingTables xmi:id="_55GFxG1eEey7c91AvgJVyA" elementId="org.eclipse.debug.ui.console" bindingContext="_54aJMm1eEey7c91AvgJVyA">
-    <bindings xmi:id="_55GFxW1eEey7c91AvgJVyA" keySequence="CTRL+D" command="_54VQ-W1eEey7c91AvgJVyA"/>
+    <bindings xmi:id="_AKd6sXezEeyTJ78vxNpE4w" keySequence="CTRL+Z" command="_54VQ-W1eEey7c91AvgJVyA">
+      <tags>platform:win32</tags>
+    </bindings>
   </bindingTables>
   <bindingTables xmi:id="_55HT2G1eEey7c91AvgJVyA" elementId="org.eclipse.jdt.ui.classFileEditorScope" bindingContext="_54aJO21eEey7c91AvgJVyA">
     <bindings xmi:id="_55HT2W1eEey7c91AvgJVyA" keySequence="CTRL+1" command="_54V3zW1eEey7c91AvgJVyA"/>
@@ -1666,7 +1672,7 @@
   <addons xmi:id="_53Rgxm1eEey7c91AvgJVyA" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
   <addons xmi:id="_53Rgx21eEey7c91AvgJVyA" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_53kbsG1eEey7c91AvgJVyA" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
-  <addons xmi:id="_IYS0IKimEeS11vbz3f9ezw" elementId="org.eclipse.ui.ide.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+  <addons xmi:id="_AK70wHezEeyTJ78vxNpE4w" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
   <addons xmi:id="_dz0JgGOlEeSMMaPQU2nlzw" elementId="org.eclipse.ui.ide.application.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.ide.application/org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon"/>
   <categories xmi:id="_54PxIG1eEey7c91AvgJVyA" elementId="org.eclipse.team.ui.category.team" name="Team" description="Actions that apply when working with a Team"/>
   <categories xmi:id="_54PxIW1eEey7c91AvgJVyA" elementId="org.eclipse.ui.category.views" name="Views" description="Commands for opening views"/>

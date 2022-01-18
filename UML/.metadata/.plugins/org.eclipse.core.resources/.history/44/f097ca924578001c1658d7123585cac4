@@ -312,7 +312,7 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@containerMappings[name='CD_ReusedMappingForFeatures']/@subNodeMappings[name='CD_Property']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_67r9IHe8EeyTJ78vxNpE4w" name="liste_joueur : List&lt;Integer>  [1]">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_67r9IHe8EeyTJ78vxNpE4w" name="liste_joueur : List&lt;JoueurEntity> [1]">
           <target xmi:type="uml:Property" href="model.uml#_5MxkQHe8EeyTJ78vxNpE4w"/>
           <semanticElements xmi:type="uml:Property" href="model.uml#_5MxkQHe8EeyTJ78vxNpE4w"/>
           <ownedStyle xmi:type="diagram:Square" uid="_67skMHe8EeyTJ78vxNpE4w" labelAlignment="LEFT">

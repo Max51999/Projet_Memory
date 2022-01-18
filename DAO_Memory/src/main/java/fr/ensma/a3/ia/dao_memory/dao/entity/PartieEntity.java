@@ -10,7 +10,7 @@ import java.util.List;
 public class PartieEntity {
 
 	private int idPartie;
-	private List<JoueurEntity> liste_joueur;
+	private List<Integer> liste_joueur;
 	private List<Integer> liste_score;
 	
 
@@ -22,11 +22,11 @@ public class PartieEntity {
 		idPartie = id;
 	}
 
-	public final List<JoueurEntity> getListe_joueur() {
+	public final List<Integer> getListe_joueur() {
 		return liste_joueur;
 	}
 
-	public final void setListe_joueur(final List<JoueurEntity> liste) {
+	public final void setListe_joueur(final List<Integer> liste) {
 		liste_joueur = liste;
 	}
 

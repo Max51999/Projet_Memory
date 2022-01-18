@@ -46,7 +46,7 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__BG3MHe4EeyTJ78vxNpE4w" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__BG3MXe4EeyTJ78vxNpE4w" value="1"/>
       </ownedAttribute>
-      <ownedAttribute xmi:id="_5MxkQHe8EeyTJ78vxNpE4w" name="liste_joueur" visibility="private" type="_DdrzYHe9EeyTJ78vxNpE4w">
+      <ownedAttribute xmi:id="_5MxkQHe8EeyTJ78vxNpE4w" name="liste_joueur" visibility="private" type="_-XNo0He8EeyTJ78vxNpE4w">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5MyLUHe8EeyTJ78vxNpE4w" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5MyLUXe8EeyTJ78vxNpE4w" value="1"/>
       </ownedAttribute>

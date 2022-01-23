@@ -23,6 +23,8 @@ public class MyMultiChatClient {
 	private static final String REST_URI = "http://localhost:8080/services/multichat/";
 
 	private static Gson gson = new Gson();
+	
+	private static boolean myTurn;
 
 	public static void main(String[] args) {
 		//Appel du service pour recupérer un canal depuis un ID
@@ -32,6 +34,9 @@ public class MyMultiChatClient {
 		List<ChatCanalDesc> rep = restclient.target(REST_URI)
 				.request(MediaType.APPLICATION_JSON).get(new GenericType<List<ChatCanalDesc>>() {});
 		
+//		if (rep == null) {
+//			restclient.target(REST_URI).request(MediaType.APPLICATION_JSON).post(new ChatCanalDesc());
+//		}
 		for (ChatCanalDesc canal : rep) {
 			System.out.println(canal.toString());
 		}
@@ -49,13 +54,21 @@ public class MyMultiChatClient {
 		System.out.println("Bienvenu sur MultiChat - " + canal + " !!");
 		System.out.println("Donne ton pseudo : ");
 		String pseudo = scan.nextLine();
+		myTurn = false;
 		try {
 			Session sess = client.connectToServer(MultiChatClientEndPoint.class, 
 					URI.create(SERVER+"/"+canal+":"+pseudo));
 			sess.getUserProperties().put("Pseudo", pseudo);
+			
 			do {
+				
 				blabla = scan.nextLine();
-				sess.getBasicRemote().sendText(formatMessage(pseudo, blabla));
+				
+				if (myTurn) {
+					sess.getBasicRemote().sendText(formatMessage(pseudo, blabla));
+					sess.getBasicRemote().sendText(test(blabla, rep.get(Integer.parseInt(canal))));
+					myTurn = false;
+				}
 			} while(!blabla.equalsIgnoreCase("quit"));
 			
 		} catch (DeploymentException e) {
@@ -69,6 +82,27 @@ public class MyMultiChatClient {
 		}	
 	}
 	
+	private static String test(String blabla, ChatCanalDesc chat) {
+		int nombre = chat.getNombre();
+		ClientMessage m = new ClientMessage();
+		if (Integer.parseInt(blabla) == nombre) {
+			m.setCanalId(0);
+			m.setLePseudo("LeServer");
+			m.setLeContenu("Gagné !!!");
+			return gson.toJson(m);
+		} else if (Integer.parseInt(blabla) < nombre) {
+			m.setCanalId(0);
+			m.setLePseudo("LeServer");
+			m.setLeContenu("Trop petit !");
+			return gson.toJson(m);
+		} else {
+			m.setLeContenu("Trop grand !");
+			m.setCanalId(0);
+			m.setLePseudo("LeServer");
+			return gson.toJson(m);
+		}
+	}
+
 	private static String formatMessage(String pseu, String bla) {
 		ClientMessage m = new ClientMessage();
         m.setCanalId(0);

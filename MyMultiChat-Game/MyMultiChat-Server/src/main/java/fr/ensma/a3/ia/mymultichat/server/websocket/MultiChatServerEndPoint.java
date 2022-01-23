@@ -23,7 +23,7 @@ import fr.ensma.a3.ia.mymultichat.api.messages.client.ClientMessageEncoder;
 @ServerEndpoint(value = "/ws/multichat/{canalandpseudo}", encoders = ClientMessageEncoder.class, decoders = ClientMessageDecoder.class)
 public class MultiChatServerEndPoint {
 
-	static Set<Set<Session>> liste_partie = Collections.synchronizedSet(new HashSet<Set<Session>>());
+	static Set<Set<Session>> liste_jeu = Collections.synchronizedSet(new HashSet<Set<Session>>());
 	
 	static Set<Session> chat1 = Collections.synchronizedSet(new HashSet<Session>());
 	static Set<Session> chat2 = Collections.synchronizedSet(new HashSet<Session>());
@@ -36,6 +36,17 @@ public class MultiChatServerEndPoint {
 		sess.getUserProperties().put("pseudo", params[1]);
 		sess.getUserProperties().put("canal", params[0]);
 		
+		/*int i = 1;
+		for (Set<Session> chat : liste_jeu) {
+			
+			if (params[0].compareTo("'" + i + "'")==0) {
+				chat.add(sess);
+			} else {
+				liste_jeu.add(Collections.synchronizedSet(new HashSet<Session>()));
+			}
+			i++;
+		}*/
+		
 		if (params[0].compareTo("1")==0) {
 			chat1.add(sess);
 		} else if (params[0].compareTo("2")==0) {
@@ -43,24 +54,61 @@ public class MultiChatServerEndPoint {
 		} else if (params[0].compareTo("3")==0) {
 			chat3.add(sess);
 		}
+
+		
+		
 	}
 
 	//Réaction du serveur à la réception du serveur
 	@OnMessage
 	public void onMessage(ClientMessage mess, Session sess) {
 		Set<Session> clients = Collections.synchronizedSet(new HashSet<Session>());
-		if (((String) sess.getUserProperties().get("canal")).compareTo("1") == 0) {
-			clients = chat1;
-		} else if (((String) sess.getUserProperties().get("canal")).compareTo("2") == 0) {
-			clients = chat2;
-		} else if (((String) sess.getUserProperties().get("canal")).compareTo("3") == 0) {
-			clients = chat3;
-		}
+        if (((String) sess.getUserProperties().get("canal")).compareTo("1") == 0) {
+                clients = chat1;
+        } else if (((String) sess.getUserProperties().get("canal")).compareTo("2") == 0) {
+                clients = chat2;
+        } else if (((String) sess.getUserProperties().get("canal")).compareTo("3") == 0) {
+                clients = chat3;
+        }
+		
+		/*Set<Session> clients = Collections.synchronizedSet(new HashSet<Session>());
+		int i = 1;
+		for (Set<Session> chat : liste_jeu) {
+			
+			if (((String) sess.getUserProperties().get("canal")).compareTo("'" + i + "'")==0) {
+				clients = chat;
+			} 
+			i++;
+		}*/
+		
 		for (Session client : clients) {
-			if (!sess.getId().equals(client.getId())) {
+			if (mess.getLeContenu().compareTo("Gagné !!!") == 0) {
+				try {
+					ClientMessage mess2 = new ClientMessage();
+					mess2.setLePseudo("LeServer");
+					mess2.setLeContenu((String) sess.getUserProperties().get("pseudo") + " a gagné ... bravo !");
+					client.getBasicRemote().sendObject(mess2);
+				} catch (IOException | EncodeException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			} else if (mess.getLeContenu().compareTo("Trop petit !")==0) {
 				try {
 					client.getBasicRemote().sendObject(mess);
-					client.getBasicRemote().sendObject(sess.getUserProperties().get("canal").compare(Integer.parseInt((String)mess)));
+				} catch (IOException | EncodeException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			} else if (mess.getLeContenu().compareTo("Trop grand !")==0) {
+				try {
+					client.getBasicRemote().sendObject(mess);
+				} catch (IOException | EncodeException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			} else if (!sess.getId().equals(client.getId())) {
+				try {
+					client.getBasicRemote().sendObject(mess);
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -69,9 +117,25 @@ public class MultiChatServerEndPoint {
 					e.printStackTrace();
 				}
 			}
+			
+			
 		}
+		if (mess.getLeContenu().compareTo("Gagné !!!") == 0) {
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			for (Session ses : clients) {
+				onClose(ses);
+			}
+			
+		}
+		
 	}
 	
+
 	@OnClose
 	public void onClose(Session sess) {
 		System.out.println(sess.getUserProperties().get("pseudo") + " vient de se déconnecter ...");

@@ -31,7 +31,11 @@
 		<groupId>javax.websocket</groupId>
 		<artifactId>javax.websocket-api</artifactId>
 	</dependency>
-    
+   <!--  <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+    </dependency>-->
   </dependencies>
 
 </project>

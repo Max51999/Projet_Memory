@@ -6,15 +6,17 @@ public class ChatCanalDesc {
 
 	private int canalId;
 	private String canalName;
-	private Random rand = new Random();
-	private int value;
 	
+	private Random rand;
+	private int nombre;
 
 	public ChatCanalDesc() {}
 	
 	public ChatCanalDesc(final int cid, final String name) {
 		canalId = cid;
 		canalName = name;
+		rand = new Random();
+		nombre = rand.nextInt(101) + 1;
 	}
 	
 	
@@ -31,22 +33,10 @@ public class ChatCanalDesc {
 	public final void setCanalName(final String name) {
 		canalName = name;
 	}
-
 	
-	public int getValue() {
-		return value;
+	public final int getNombre() {
+		return nombre;
 	}
-	
-	
-	public String compare(int i) {
-		if (i>value) {
-			return "Trop grand";
-		} else if (i<value) {
-			return "Trop petit";
-		} else {
-			return "Gagne";
-		}
-	} 
 	
 	@Override
 	public String toString() {

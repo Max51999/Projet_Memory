@@ -18,7 +18,6 @@
     <module>MyMultiChat-Server</module>
     <module>MyMultiChat-MessagesAPI</module>
     <module>MyMultiChat-Client</module>
-    <module>MyMultiChatBusiness</module>
   </modules>
 
   <properties>

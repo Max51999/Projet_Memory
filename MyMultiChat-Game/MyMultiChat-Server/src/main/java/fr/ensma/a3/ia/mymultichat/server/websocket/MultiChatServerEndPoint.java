@@ -324,11 +324,8 @@ public class MultiChatServerEndPoint {
 					}
 				} 
 				
-				
-				
-				
-				
-				if (((int) client.getUserProperties().get("numero")) == joueur) {
+							
+				if ((((int) client.getUserProperties().get("numero")) == joueur) && (Integer.parseInt(params[1]) != Integer.parseInt(params[0]))) {
 					ClientMessage messtour = new ClientMessage();
 					messtour.setLePseudo("LeServer");
 					messtour.setLeContenu("A ton tour !");

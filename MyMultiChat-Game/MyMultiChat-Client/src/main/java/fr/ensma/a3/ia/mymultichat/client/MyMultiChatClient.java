@@ -6,8 +6,11 @@ import java.util.List;
 import java.util.Scanner;
 
 import javax.websocket.DeploymentException;
+import javax.websocket.OnMessage;
 import javax.websocket.Session;
+
 import org.glassfish.tyrus.client.ClientManager;
+
 import com.google.gson.Gson;
 
 import fr.ensma.a3.ia.mymultichat.api.canal.ChatCanalDesc;
@@ -24,7 +27,6 @@ public class MyMultiChatClient {
 
 	private static Gson gson = new Gson();
 	
-	private static boolean myTurn;
 
 	public static void main(String[] args) {
 		//Appel du service pour recupérer un canal depuis un ID
@@ -54,21 +56,22 @@ public class MyMultiChatClient {
 		System.out.println("Bienvenu sur MultiChat - " + canal + " !!");
 		System.out.println("Donne ton pseudo : ");
 		String pseudo = scan.nextLine();
-		myTurn = false;
+		
 		try {
 			Session sess = client.connectToServer(MultiChatClientEndPoint.class, 
 					URI.create(SERVER+"/"+canal+":"+pseudo));
 			sess.getUserProperties().put("Pseudo", pseudo);
 			
+			
 			do {
+				
 				
 				blabla = scan.nextLine();
 				
-				if (myTurn) {
-					sess.getBasicRemote().sendText(formatMessage(pseudo, blabla));
-					sess.getBasicRemote().sendText(test(blabla, rep.get(Integer.parseInt(canal))));
-					myTurn = false;
-				}
+				
+				sess.getBasicRemote().sendText(formatMessage(pseudo, blabla + ":" + rep.get(Integer.parseInt(canal)).getNombre()));
+				
+				
 			} while(!blabla.equalsIgnoreCase("quit"));
 			
 		} catch (DeploymentException e) {
@@ -82,7 +85,7 @@ public class MyMultiChatClient {
 		}	
 	}
 	
-	private static String test(String blabla, ChatCanalDesc chat) {
+	/*private static String test(String blabla, ChatCanalDesc chat) {
 		int nombre = chat.getNombre();
 		ClientMessage m = new ClientMessage();
 		if (Integer.parseInt(blabla) == nombre) {
@@ -101,7 +104,7 @@ public class MyMultiChatClient {
 			m.setLePseudo("LeServer");
 			return gson.toJson(m);
 		}
-	}
+	}*/
 
 	private static String formatMessage(String pseu, String bla) {
 		ClientMessage m = new ClientMessage();
@@ -111,4 +114,5 @@ public class MyMultiChatClient {
         return gson.toJson(m);
     }
 
+	
 }

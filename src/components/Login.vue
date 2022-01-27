@@ -1,22 +1,31 @@
 <template>
   <div class="LoginForm">
-    <form id="app" @submit="checkForm">
+      <form
+        id="app"
+        @submit="checkForm"
+      >
       <h5>
-        <p v-if="errors.length">
-        <b>Corriger vos erreurs ... : </b>
-        <ul style="list-style-type: none;">
-          <li v-for="error in errors" :key="error">{{ error }}</li>
-        </ul>
+      <p v-if="errors.length">
+      <b>Corriger vos erreurs ... : </b>
+      <ul style="list-style-type: none;">
+        <li v-for="error in errors" :key="error">{{ error }}</li>
+      </ul>
       </p></h5>
       <p>
-      <label for ="nom">Nom : </label>
-      <input id="nom" name="nom" type="text" v-model="nom" /></p>
+      <label for="nom">Nom : </label>
+      <input
+        id="nom"
+        name="nom"
+        type="text"
+        v-model="nom">
+      </p>
       <p>
-      <input type="submit" value="Go !!"/>
+      <input
+        type="submit"
+        value="Go !!">
       </p>
     </form>
   </div>
-  
 </template>
 
 <script>
@@ -32,7 +41,7 @@ export default {
       if (this.nom) {
         this.$store.commit("setLeUser", this.nom);
         this.$emit("loginEvent");
-        this.$router.push({ name: "Maison", params: {lenom: this.nom}});
+        this.$router.push({ name: "Maison", params: { lenom: this.nom } });
       }
       if (!this.nom) {
         this.errors.push("Nom obligatoire.");
@@ -40,5 +49,5 @@ export default {
       e.preventDefault();
     },
   },
-}
+};
 </script>

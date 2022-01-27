@@ -1,24 +1,23 @@
 <template>
-  <div class="app">
-    <Bienvenue :msg="titremess"/>
+  <div id="app">
+    <bienvenue :msg="titremess" />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import Bienvenue from '@/components/Bienvenue.vue'
+import Bienvenue from "./components/Bienvenue.vue";
 
 export default {
-  name: 'Home',
+  name: "App",
   components: {
-    Bienvenue
+    Bienvenue,
   },
-  data(){
+  data() {
     return {
       titremess: "sur MyMultichat-Game !!!",
-    }
+    };
   }
-}
+};
 </script>
 
 <style>

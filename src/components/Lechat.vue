@@ -13,17 +13,19 @@
       </tr>
     </tbody>
   </table>
-  <button @click="chatConnect(1)">Canal 1</button>
-  <button @click="chatConnect(2)">Canal 2</button>
-  <button @click="chatConnect(3)">Canal 3</button>
-  <div>
-    <span><pre>{{ chatAllMessage }}</pre></span>
+  <div v-if="this.serverUrl == ''">
+    <button v-for="row in this.leschat" :key="row" @click="chatConnect(row.canalId)">Canal {{ row.canalId }}</button>
   </div>
-  <input v-model="reponse" style="width:300px"/>
-  <button @click="sendReponse">répondre ...</button>
-  <p>
-  <button @click="chatBye">ByeBye ...</button>
-  </p>
+  <div v-if="this.serverUrl !=''">
+    <div>
+      <span><pre>{{ chatAllMessage }}</pre></span>
+    </div>
+    <input v-model="reponse" style="width:300px"/>
+    <button @click="sendReponse">répondre ...</button>
+    <p>
+    <button @click="chatBye">ByeBye ...</button>
+    </p>
+  </div>
 </template>
 <script>
 import axios from "axios";

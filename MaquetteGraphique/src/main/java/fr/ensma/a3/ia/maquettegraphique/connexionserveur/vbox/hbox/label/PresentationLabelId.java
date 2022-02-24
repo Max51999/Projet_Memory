@@ -5,14 +5,26 @@ public class PresentationLabelId {
 	private IVueLabelId vue;
 	private ModeleLabelId modele;
 	
-	public PresentationLabelId() {
+	private String name;
+	
+	public PresentationLabelId(String n) {
+		name = n;
 		vue = new VueLabelId(this);
-		modele = new ModeleLabelId();
+		modele = new ModeleLabelId(this);
+		
 	}
 	
+	public String getName() {
+		return name;
+	}
 	
 	public IVueLabelId getVue() {
 		return vue;
+	}
+
+
+	public ModeleLabelId getModele() {
+		return modele;
 	}
 	
 }

@@ -9,6 +9,7 @@ public class VueLabelId extends Label implements IVueLabelId {
 	public VueLabelId(PresentationLabelId pres) {
 		super();
 		idPres = pres;
-		setText(pres.getModele().getVal());
+		setText(pres.getName());
 	}
 }
+

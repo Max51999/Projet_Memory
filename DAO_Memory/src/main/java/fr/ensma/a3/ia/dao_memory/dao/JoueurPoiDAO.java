@@ -34,6 +34,7 @@ public class JoueurPoiDAO extends AbstractPoiDAO<JoueurEntity> {
 				joueur.setNomJoueur(ligne.getCell(1).getStringCellValue());
 				joueur.setPrenomJoueur(ligne.getCell(2).getStringCellValue());
 				joueur.setMailJoueur((String)ligne.getCell(3).getStringCellValue());
+				joueur.setPseudo((String)ligne.getCell(4).getStringCellValue());
 				trouve = true;
 			}
 		}
@@ -72,7 +73,7 @@ public class JoueurPoiDAO extends AbstractPoiDAO<JoueurEntity> {
 			joueur.setNomJoueur(ligne.getCell(1).getStringCellValue());
 			joueur.setPrenomJoueur(ligne.getCell(2).getStringCellValue());
 			joueur.setMailJoueur((String)ligne.getCell(3).getStringCellValue());
-			
+			joueur.setPseudo((String)ligne.getCell(4).getStringCellValue());
 			listejoueur.add(joueur);
 		}
 		closeBase(bdd);
@@ -96,6 +97,8 @@ public class JoueurPoiDAO extends AbstractPoiDAO<JoueurEntity> {
 			cell.setCellValue(elem.getPrenomJoueur());
 			cell = ligne.createCell(3);
 			cell.setCellValue(elem.getMailJoueur());
+			cell = ligne.createCell(4);
+			cell.setCellValue(elem.getPseudo());
 			writeBase(bdd);
 			closeBase(bdd);
 		} else {
@@ -118,6 +121,7 @@ public class JoueurPoiDAO extends AbstractPoiDAO<JoueurEntity> {
 				ligne.getCell(1).setCellValue(elem.getNomJoueur());
 				ligne.getCell(2).setCellValue(elem.getPrenomJoueur());
 				ligne.getCell(3).setCellValue(elem.getMailJoueur());
+				ligne.getCell(4).setCellValue(elem.getPseudo());
 				writeBase(bdd);
 			}
 		}

@@ -10,7 +10,6 @@ public class VueTextFieldId extends TextField implements IVueTextFieldId {
 	public VueTextFieldId(PresentationTextFieldId pres) {
 		super();
 		idPres = pres;
-		
 	}
 }
 

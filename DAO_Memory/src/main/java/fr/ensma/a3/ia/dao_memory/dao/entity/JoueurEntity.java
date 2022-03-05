@@ -11,6 +11,7 @@ public class JoueurEntity {
 	private String nomJoueur;
 	private String prenomJoueur;
 	private String mailJoueur;
+	private String pseudo;
 	
 	public final int getIdJoueur() {
 		return idJoueur;
@@ -44,10 +45,19 @@ public class JoueurEntity {
 		mailJoueur = mail;
 	}
 	
+	public final String getPseudo() {
+		return pseudo;
+	}
+
+	public final void setPseudo(final String p) {
+		pseudo = p;
+	}
+	
+	
 	
 	@Override
 	public String toString() {
-		return idJoueur + " : " + nomJoueur + " " + prenomJoueur;
+		return idJoueur + " : " + nomJoueur + " " + prenomJoueur + pseudo;
 	}
 	
 	@Override
@@ -63,7 +73,7 @@ public class JoueurEntity {
 		} else {
 			JoueurEntity joueur = (JoueurEntity) obj;
 			if ((joueur.getNomJoueur().compareTo(nomJoueur) == 0) && (joueur.getPrenomJoueur().compareTo(prenomJoueur) == 0) 
-					&& (joueur.getMailJoueur().compareTo(mailJoueur) == 0)) {
+					&& (joueur.getMailJoueur().compareTo(mailJoueur) == 0) && (joueur.getPseudo().compareTo(pseudo) == 0)) {
 				return true;
 			} else {
 				return false;

@@ -15,6 +15,11 @@
             <artifactId>javafx-controls</artifactId>
             <version>13</version>
         </dependency>
+        <dependency>
+      		<groupId>fr.ensma.a3.ia.dao_memory</groupId>
+      		<artifactId>DAO_Memory</artifactId>
+      		<version>1.0-SNAPSHOT</version>
+    	</dependency>
     </dependencies>
     <build>
         <plugins>
@@ -41,6 +46,20 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>3.2.0</version>
+				<executions>
+				</executions>
+			</plugin>
         </plugins>
     </build>
+    <reporting>
+    <plugins>
+      <plugin>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </reporting>
 </project>

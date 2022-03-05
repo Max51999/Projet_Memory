@@ -25,6 +25,8 @@ public class PresentationVBox {
 		mail = new PresentationHBox("Email");
 		connexion = new PresentationConnexion();
 		vue = new VueVBox(this);
+		
+		connexion.setVBox(this);
 	}
 	
 	public PresentationHBox getNom() {
@@ -50,5 +52,16 @@ public class PresentationVBox {
 	public IVueVBox getVue() {
 		return vue;
 	}
+
+	public void clique() {
+		String n,p,m,ps;
+		n = nom.getText().getVue().getText();
+		p = prenom.getText().getVue().getText();
+		m = mail.getText().getVue().getText();
+		ps = pseudo.getText().getVue().getText();
+		modele.ajoutJoueur(n, p, m, ps);
+	}
+	
+	
 	
 }

@@ -3,6 +3,7 @@ package fr.ensma.a3.ia.maquettegraphique.plateau.agentplateau;
 import java.util.ArrayList;
 import java.util.List;
 
+import fr.ensma.a3.ia.maquettegraphique.PresentationGlobal;
 import fr.ensma.a3.ia.maquettegraphique.plateau.agentcarte.IObserverCarte;
 import fr.ensma.a3.ia.maquettegraphique.plateau.agentcarte.PresentationCarte;
 
@@ -10,6 +11,8 @@ import fr.ensma.a3.ia.maquettegraphique.plateau.agentcarte.PresentationCarte;
 
 public class PresentationPlateau implements IObservableCarte {
 
+	
+	private PresentationGlobal global;
 	private IPresentationPlateau mediateur;
 	
 	private List<IObserverCarte> liste;
@@ -25,6 +28,14 @@ public class PresentationPlateau implements IObservableCarte {
 			liste.add(case1);
 		}
 		mediateur = new MediateurPlateau(this);
+	}
+	
+	public void setGlobal(PresentationGlobal g) {
+		global = g;
+	}
+	
+	public PresentationGlobal getGlobal() {
+		return global;
 	}
 	
 	public IObserverCarte getCarte(Integer i) {

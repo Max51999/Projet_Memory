@@ -6,13 +6,13 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
-public class VueVBox extends VBox implements IVueVBox {
+public class VueConnexionServeur extends VBox implements IVueConnexionServeur {
 
-	private PresentationVBox pres;
+	private PresentationConnexionServeur pres;
 	
 	private Label label;
 	
-	public VueVBox(PresentationVBox p) {
+	public VueConnexionServeur(PresentationConnexionServeur p) {
 		super(20);
 		pres = p;
 		label = new Label("Connexion au jeu Memory");

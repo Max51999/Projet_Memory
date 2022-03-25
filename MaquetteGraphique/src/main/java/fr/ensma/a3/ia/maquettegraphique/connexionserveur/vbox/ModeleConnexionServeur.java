@@ -30,6 +30,21 @@ public class ModeleConnexionServeur {
 		pseudo = ps;
 	}
 	
+	public String getNom() {
+		return nom;
+	}
+	
+	public String getPrenom() {
+		return prenom;
+	}
+	
+	public String getMail() {
+		return mail;
+	}
+	
+	public String getPseudo() {
+		return pseudo;
+	}
 	/*public void ajoutJoueur(String nom, String prenom, String mail, String pseudo) {
 		JoueurEntity joueurajout = new JoueurEntity();
     	joueurajout.setNomJoueur(nom);

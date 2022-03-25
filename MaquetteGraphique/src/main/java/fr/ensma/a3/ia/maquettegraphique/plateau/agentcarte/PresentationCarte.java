@@ -10,13 +10,14 @@ public class PresentationCarte implements IObserverCarte {
 	private static Integer nombre_carte = 0; 
 	private Integer numero_carte;
 	private IObservableCarte plateauPres;
+	private int position;
 	
-	public PresentationCarte() {
-		mediateur = new MediateurCarte(this);
+	public PresentationCarte(String nom, Integer pos) {
+		mediateur = new MediateurCarte(this, nom);
 		etat = 0;
 		nombre_carte ++;
 		numero_carte = nombre_carte;
-		
+		position = pos;
 	}
 	
 	public void setPlateau(IObservableCarte obs) {
@@ -30,9 +31,13 @@ public class PresentationCarte implements IObserverCarte {
 	public Integer getNumCarte() {
 		return numero_carte;
 	}
+	
+	public Integer getPosition() {
+		return position;
+	}
 
 	public void changement() {
-		plateauPres.notifier(this);		
+		plateauPres.notifier(this);	
 	}
 
 	public MediateurCarte getMediateur() {
@@ -42,6 +47,11 @@ public class PresentationCarte implements IObserverCarte {
 	@Override
 	public void cliqueCarte(IObserverCarte ca) {
 		System.out.println("Carte "+ numero_carte + " clique effectué sur la Carte" + ca.getNumCarte());
+	}
+
+	@Override
+	public void cache() {
+		mediateur.cache();
 	}
 
 	

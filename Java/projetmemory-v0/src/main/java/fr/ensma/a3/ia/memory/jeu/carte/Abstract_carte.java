@@ -15,8 +15,8 @@ public abstract class Abstract_carte implements ICarte, IEtatCarte {
 	/**
 	 * Constructeur carte abstraite
 	 */
-	public Abstract_carte() {
-		
+	public Abstract_carte(Integer pos) {
+		position = pos;
 	}
 	
 	/**
@@ -39,19 +39,19 @@ public abstract class Abstract_carte implements ICarte, IEtatCarte {
 	 * 
 	 * @param carte
 	 */
-	@Override
+	
 	public void amulette(ICarte carte) {
 		// TODO
 	}
 	
 
-	@Override
+	
 	public void visible() {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
+	
 	public void retourne() {
 		// TODO Auto-generated method stub
 		

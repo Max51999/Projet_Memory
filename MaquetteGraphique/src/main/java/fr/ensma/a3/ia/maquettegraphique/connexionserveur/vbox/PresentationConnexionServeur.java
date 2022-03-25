@@ -34,6 +34,10 @@ public class PresentationConnexionServeur {
 		connexion.setVBox(this);
 	}
 	
+	public ModeleConnexionServeur getModele() {
+		return modele;
+	}
+	
 	public void setGlobal(PresentationGlobal g) {
 		global = g;
 	}

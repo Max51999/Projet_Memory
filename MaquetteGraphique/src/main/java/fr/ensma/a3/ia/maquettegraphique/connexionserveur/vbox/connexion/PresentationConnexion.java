@@ -26,7 +26,7 @@ public class PresentationConnexion {
 	public void clique() {
 		System.out.println("Connexion en cours");
 		pres.clique();
-		pres.clique();
+		
 	}
 
 	public IVueConnexion getVue() {

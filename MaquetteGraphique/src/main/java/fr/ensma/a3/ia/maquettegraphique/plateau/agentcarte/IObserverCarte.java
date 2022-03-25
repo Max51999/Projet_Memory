@@ -11,4 +11,7 @@ public interface IObserverCarte {
 	void cliqueCarte(IObserverCarte ca);
 
 	public Integer getNumCarte();
+	public Integer getPosition();
+
+	public void cache();
 }

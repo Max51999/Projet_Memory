@@ -13,7 +13,8 @@ public class Carte_classique extends Abstract_carte {
 	 * Constructeur d'une carte classique
 	 * @param num
 	 */
-	public Carte_classique(Integer num) {
+	public Carte_classique(Integer pos, Integer num) {
+		super(pos);
 		numero = num;
 	}
 	

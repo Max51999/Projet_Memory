@@ -6,9 +6,9 @@ public class MediateurCarte implements IPresentationCarte {
 	private PresentationCarte presentation;
 	private IVueCarte vue;
 	
-	public MediateurCarte(PresentationCarte pr) {
+	public MediateurCarte(PresentationCarte pr, String nom) {
 		presentation = pr;
-		vue = new VueCarte(this);
+		vue = new VueCarte(this, nom);
 	}
 
 	@Override
@@ -28,6 +28,11 @@ public class MediateurCarte implements IPresentationCarte {
 	public void change() {
 		presentation.changement();
 		
+	}
+
+	@Override
+	public void cache() {
+		vue.retourne();
 	}
 
 

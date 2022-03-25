@@ -7,22 +7,23 @@ import javafx.scene.layout.GridPane;
 public class VuePlateau extends GridPane implements IVuePlateau {
 
 	private IPresentationPlateau mediateur;
-	private Integer i,j,k;
+	private Integer i,j, taille, hauteur, largeur;
 	
 	public VuePlateau(IPresentationPlateau med) {
 		super();
-		setPrefHeight(100);
-		setPrefWidth(400);
+		setPrefHeight(200);
+		setPrefWidth(500);
 		mediateur = med;
-		setHgap(3);
-		setVgap(3);
-		
-		k = 0;
-		for (i=0;i<5;i++) {
-			for (j=0;j<8;j++) {
-				add(mediateur.getPresentation().getCarte(k).getMediateur().getVue(),j,i);
-				k++;
-			}
+		taille = mediateur.getPresentation().getGlobal().getJeu().getTaille();
+		largeur = 8;
+		hauteur = taille/largeur +1;
+		setHgap(30);
+		setVgap(30);
+		for (i=0 ; i<taille;i++) {
+			add(mediateur.getPresentation().getCarte(i).getMediateur().getVue(), 
+					(mediateur.getPresentation().getCarte(i).getPosition()-1)%8,
+					((mediateur.getPresentation().getCarte(i).getPosition()-1)/8));
 		}
+		
 	}
 }

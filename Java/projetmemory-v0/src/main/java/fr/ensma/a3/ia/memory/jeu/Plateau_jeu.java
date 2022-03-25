@@ -2,9 +2,10 @@ package fr.ensma.a3.ia.memory.jeu;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 import fr.ensma.a3.ia.memory.jeu.carte.Abstract_carte;
+import fr.ensma.a3.ia.memory.jeu.carte.Carte_classique;
+import fr.ensma.a3.ia.memory.jeu.carte.mystere.Carte_mystere;
 import fr.ensma.a3.ia.memory.joueur.Abstract_joueur;
 
 /**
@@ -12,13 +13,14 @@ import fr.ensma.a3.ia.memory.joueur.Abstract_joueur;
  * @author vitrym
  *
  */
-public class Plateau_jeu {
+public class Plateau_jeu extends Thread {
 
 	private Integer taille;
 	private Integer nb_paire;
 	private Integer nb_mystere;
 	private List<Abstract_carte> liste_carte;
 	private List<Abstract_joueur> liste_joueur;
+	private List<Integer> liste_position;
 	
 	/**
 	 * Constructeur d'un plateau de jeu
@@ -26,6 +28,7 @@ public class Plateau_jeu {
 	public Plateau_jeu() {
 		liste_carte = new ArrayList<Abstract_carte>();
 		liste_joueur = new ArrayList<Abstract_joueur>();
+		liste_position = new ArrayList<Integer>();
 	}
 	
 	
@@ -37,13 +40,15 @@ public class Plateau_jeu {
 		return nb_paire;
 	}
 	
+	
 	/**
-	 * Getter Nombre de cartes mystère
+	 * Getter Nombre de cartes mystï¿½re
 	 * @return
 	 */
 	public Integer getMystere() {
 		return nb_mystere;
 	}
+	
 	
 	/**
 	 * Getter Taille du plateau
@@ -53,8 +58,9 @@ public class Plateau_jeu {
 		return taille;
 	}
 	
+	
 	/**
-	 * Renvoie le joueur numéro num
+	 * Renvoie le joueur numï¿½ro num
 	 * @param num
 	 * @return Abstract_Joueur
 	 */
@@ -62,14 +68,16 @@ public class Plateau_jeu {
 		return liste_joueur.get(num);
 	}
 	
+	
 	/**
-	 * Renvoie le carte à la place num
+	 * Renvoie le carte ï¿½ la place num
 	 * @param num
 	 * @return Abstract_Carte
 	 */
 	public Abstract_carte getCarte(Integer num) {
 		return liste_carte.get(num);
 	}
+	
 	
 	/**
 	 * Setter Taille du plateau
@@ -79,6 +87,7 @@ public class Plateau_jeu {
 		taille = size;
 	}
 	
+	
 	/**
 	 * Setter Nombre de carte mystere
 	 * @param mystere
@@ -86,6 +95,7 @@ public class Plateau_jeu {
 	public void setMystere(Integer mystere) {
 		nb_mystere = mystere;
 	}
+	
 	
 	/**
 	 * Setter Nombre de paires
@@ -95,8 +105,9 @@ public class Plateau_jeu {
 		nb_paire = paire;
 	}
 	
+	
 	/**
-	 * Permet de choisir la taille du plateau (possiblement entre plusieurs tailles prédéfinis)
+	 * Permet de choisir la taille du plateau (possiblement entre plusieurs tailles prï¿½dï¿½finis)
 	 * @param size
 	 * @throws ExceptionTaille
 	 */
@@ -113,17 +124,32 @@ public class Plateau_jeu {
 		} else {
 			throw new ExceptionTaille("Erreur dans le choix de la taille");
 		}
+		int i;
+		for (i=1;i<=taille;i++) {
+			liste_position.add(i);
+		}
 	}
 	
+	
 	/**
-	 * Choix du nombre de paire différentes sur le plateau
+	 * Choix du nombre de paire diffï¿½rentes sur le plateau
+	 * @throws ExceptionTaille 
 	 */
-	public void choix_nb_paire() {
-		// TODO
+	public void choix_nb_paire(ETaille size) throws ExceptionTaille {
+		if (size == ETaille.petit) {
+			setPaire(14);
+		} else if (size == ETaille.moyen) {
+			setTaille(20);
+		} else if (size == ETaille.grand) {
+			setTaille(30);
+		} else {
+			throw new ExceptionTaille("Erreur dans le choix de la taille");
+		}
 	}
 
+	
 	/**
-	 * Choix du nombre de cartes mystères (entre 2, 4 et 6)
+	 * Choix du nombre de cartes mystï¿½res (entre 2, 4 et 6)
 	 * @param size
 	 * @throws ExceptionTaille
 	 */
@@ -139,15 +165,51 @@ public class Plateau_jeu {
 		}
 	}
 	
+	
 	/**
 	 * Initialise une partie
 	 */
-	public void initialisation() {
-		// TODO
+	public void initialisation(ETaille size) {
+		try {
+			choix_taille_plateau(size);
+			choix_cartes_mystere(size);
+			choix_nb_paire(size);
+		} catch (ExceptionTaille e) {
+			e.printStackTrace();
+		}
+		
+		int i;
+		int c_paire = 1;
+		int c_carte = 1;
+		
+		for (i=1;i<=taille;i++) {
+			Abstract_carte c;
+			int random = 1 + (int)(Math.random()*(taille-i)+1);
+			if (i<=nb_mystere) {
+				c = new Carte_mystere(liste_position.get(random));
+			} else {
+				c = new Carte_classique(random,c_paire);
+				if (c_carte == 1) {
+					c_carte ++;
+				} else {
+					c_carte --;
+					if (c_paire == nb_paire) {
+						c_paire = 1;
+					} else {
+						c_paire ++;
+					}
+				}
+			}
+			ajout_carte(c);
+			liste_position.remove(random);
+		}
 	}
 	
+	
+	
+	
 	/**
-	 * Ajoute un joueur à une partie
+	 * Ajoute un joueur ï¿½ une partie
 	 */
 	public void ajout_joueur(Abstract_joueur joueur) {
 		liste_joueur.add(joueur);
@@ -162,26 +224,46 @@ public class Plateau_jeu {
 	}
 	
 	/**
-	 * Revele le plateau à un joueur
+	 * Revele le plateau ï¿½ un joueur
+	 * @param abstract_joueur 
 	 */
-	public void revele() {
-		// TODO
+	public void revele(Abstract_joueur abstract_joueur) {
+		for (Abstract_carte c : liste_carte) {
+			c.retourne();
+		}
 	}
 	
 	/**
 	 * Melange les cartes sur le plateau
 	 */
 	public void melange() {
-		// TODO
+		liste_position = new ArrayList<Integer>();
+		for (Abstract_carte i : liste_carte) {
+			liste_position.add(i.getPosition());
+		}
+		int taille = liste_position.size();
+		int i;
+		for (i=1;i<=taille;i++) {
+			int random = 1 + (int)(Math.random()*(taille-i)+1);
+			liste_carte.get(i).setPosition(liste_position.get(random));
+			liste_position.remove(random);
+		}
 	}
 	
 	/**
-	 * Met fin à la partie
+	 * Met fin ï¿½ la partie
 	 */
-	public void fin_partie() {
-		// TODO
+	public boolean fin_partie() {
+		if (liste_carte.size() == 0) {
+			return true;
+		}
+		return false;
 	}
 	
+	@Override
+	public void run() {
+		
+	}
 	
 	
 }

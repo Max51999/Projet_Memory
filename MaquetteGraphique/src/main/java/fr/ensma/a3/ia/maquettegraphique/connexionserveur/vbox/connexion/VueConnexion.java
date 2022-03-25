@@ -1,10 +1,10 @@
 package fr.ensma.a3.ia.maquettegraphique.connexionserveur.vbox.connexion;
 
-import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 
-public class VueConnexion extends Button implements IVueConnexion, EventHandler<ActionEvent> {
+public class VueConnexion extends Button implements IVueConnexion, EventHandler<MouseEvent> {
 
 	
 	private PresentationConnexion pres; 
@@ -12,12 +12,11 @@ public class VueConnexion extends Button implements IVueConnexion, EventHandler<
 	public VueConnexion(PresentationConnexion p) {
 		super("Connexion");
 		pres = p;
-		addEventHandler(ActionEvent.ACTION, this);
-		
+		addEventHandler(MouseEvent.MOUSE_CLICKED, this);
 	}
 
 	@Override
-	public void handle(ActionEvent event) {
+	public void handle(MouseEvent event) {
 		pres.clique();
 	}
 }

@@ -6,6 +6,8 @@ import java.util.List;
 import fr.ensma.a3.ia.memory.interaction.Attente;
 import fr.ensma.a3.ia.memory.interaction.IEtatJoueur;
 import fr.ensma.a3.ia.memory.interaction.Jeu;
+import fr.ensma.a3.ia.memory.jeu.Plateau_jeu;
+import fr.ensma.a3.ia.memory.jeu.carte.Abstract_carte;
 import fr.ensma.a3.ia.memory.jeu.carte.Carte_classique;
 
 /**
@@ -13,7 +15,7 @@ import fr.ensma.a3.ia.memory.jeu.carte.Carte_classique;
  * @author vitrym
  *
  */
-public abstract class Abstract_joueur implements IEtatJoueur {
+public abstract class Abstract_joueur extends Thread implements IEtatJoueur {
 
 	private String id;
 	private String nom;
@@ -24,10 +26,14 @@ public abstract class Abstract_joueur implements IEtatJoueur {
 	private Integer nb_tours;
 	protected static Integer numero_joueur = 0;
 	private List<Carte_classique> liste_carte;
+	private Abstract_carte carte1;
+	private Abstract_carte carte2;
 	
 	private IEtatJoueur etat_courant;
 	private IEtatJoueur en_jeu = new Jeu(this);
 	private IEtatJoueur en_attente = new Attente(this);
+	
+	private Plateau_jeu plateau;
 	
 	/**
 	 * Constructeur d'un joueur
@@ -36,7 +42,7 @@ public abstract class Abstract_joueur implements IEtatJoueur {
 	 * @param email
 	 * @param nickname
 	 */
-	public Abstract_joueur(String name, String surname, String email, String nickname) {
+	public Abstract_joueur(String name, String surname, String email, String nickname, Plateau_jeu p) {
 		numero_joueur += 1;
 		nom = surname;
 		prenom = name;
@@ -47,6 +53,8 @@ public abstract class Abstract_joueur implements IEtatJoueur {
 		nb_tours = 1;
 		liste_carte = new ArrayList<Carte_classique>();
 		etat_courant = en_attente;
+		plateau = p;
+		plateau.ajout_joueur(this);
 	}
 	
 	/**
@@ -129,47 +137,81 @@ public abstract class Abstract_joueur implements IEtatJoueur {
 		nb_tours = tours;
 	}
 	
+
+	
+	
+	
 	/**
 	 * Permet au joueur de retourner une carte
 	 */
-	public void retourne_carte() {
-		// TODO
+	public void retourne_carte1(int i) {
+		carte1 = plateau.getCarte(i);
 	}
 	
 	/**
-	 * Vérifie si une paire a été trouvée
+	 * Permet au joueur de retourner une carte
+	 */
+	public void retourne_carte2(int i) {
+		carte1 = plateau.getCarte(i);
+	}
+	
+	/**
+	 * Vï¿½rifie si une paire a ï¿½tï¿½ trouvï¿½e
 	 * 
 	 */
-	public void paire_trouvee() {
-		// TODO
+	public void paire_trouvee(Carte_classique c1, Carte_classique c2) {
+		if (c1.getNumero() == c2.getNumero()) {
+			ajout_carte(c1);
+			ajout_carte(c2);
+			nb_cartes += 2;
+		}
 	}
 	
 	/**
-	 * Remet à 0 le nombre de cartes du joueur (fonction activée lorsque le joueur tire la carte mystère Dans_ta_face)
+	 * Ajoute une paire dans la main du joueur
+	 * @param carte
+	 */
+	public void ajout_carte(Carte_classique carte) {
+		liste_carte.add(carte);
+	}
+	
+	/**
+	 * Remet ï¿½ 0 le nombre de cartes du joueur (fonction activï¿½e lorsque le joueur tire la carte mystï¿½re Dans_ta_face)
 	 * 
 	 */
 	public void reset() {
-		// TODO
+		for (Carte_classique c:liste_carte) {
+			plateau.ajout_carte(c);
+			nb_cartes --;
+		}
+		plateau.melange();
 	}
 	
 	/**
-	 * Revele toutes les cartes du plateau pendant 5 secondes (fonction activée lorsque le joueur tire la carte mystère Revele_tout)
+	 * Revele toutes les cartes du plateau pendant 5 secondes (fonction activï¿½e lorsque le joueur tire la carte mystï¿½re Revele_tout)
 	 * 
 	 */
 	public void revele() {
-		// TODO
+		plateau.revele(this);
 	}
 	
 	
-	@Override
 	public void attente() {
 		// TODO Auto-generated method stub
 		
 	}
 
+	
+	/**
+	 * Permet au joueur d'effectuer un tour de jeu
+	 */
 	@Override
-	public void jeu() {
-		// TODO Auto-generated method stub
+	public void run() {
+		while(nb_tours>0) {
+			
+			nb_tours --;
+			
+		}
 		
 	}
 	

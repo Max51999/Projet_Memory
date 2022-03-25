@@ -47,6 +47,10 @@ public class PresentationListePartie {
 	public void listetoplateau() {
 		global.listetoplateau();
 	}
+
+	public void init_vue() {
+		vue.init_vue();
+	}
 	
 
 	

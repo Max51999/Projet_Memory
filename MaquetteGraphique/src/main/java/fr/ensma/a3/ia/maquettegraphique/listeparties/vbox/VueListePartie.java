@@ -15,10 +15,13 @@ public class VueListePartie extends VBox implements IVueListePartie {
 	public VueListePartie(PresentationListePartie p) {
 		super(20);
 		pres = p;
-		nom = new Label("Bonjour ");
+	}
+
+	@Override
+	public void init_vue() {
+		nom = new Label("Bonjour " + pres.getGlobal().getConnexionServeur().getModele().getPseudo());
 		liste = new Label("Liste des parties : ");
-		getChildren().addAll(nom, liste, (HBox) pres.getTextArea().getVue(), (Button) pres.getPartie().getVue());
-		
+		getChildren().addAll(nom, liste, (HBox) pres.getTextArea().getVue(), (Button) pres.getPartie().getVue());	
 	}
 
 	

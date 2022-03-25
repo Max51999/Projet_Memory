@@ -26,13 +26,13 @@ public class TestPlateau extends Application {
     	stage.setMinWidth(500);
     	stage.setMinHeight(500);
     	root = new HBox();
-    	plateauPres = new PresentationPlateau();
+    /*	plateauPres = new PresentationPlateau();
     	scorePres = new PresentationScore();
     	
     	root.getChildren().addAll(plateauPres.getMediateur().getVue(), (TextArea)scorePres.getVue());
         scene = new Scene(root, 640, 480);
         stage.setScene(scene);
-        stage.show();
+        stage.show();*/
     }
 
     public static void main(String[] args) {

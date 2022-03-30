@@ -37,7 +37,8 @@ public class PresentationCarte implements IObserverCarte {
 	}
 
 	public void changement() {
-		plateauPres.notifier(this);	
+		plateauPres.notifier(this);
+		
 	}
 
 	public MediateurCarte getMediateur() {
@@ -52,6 +53,7 @@ public class PresentationCarte implements IObserverCarte {
 	@Override
 	public void cache() {
 		mediateur.cache();
+		System.out.println("La carte "+ position);
 	}
 
 	

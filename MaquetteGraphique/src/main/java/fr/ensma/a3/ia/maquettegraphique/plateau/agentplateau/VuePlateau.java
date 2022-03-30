@@ -2,6 +2,7 @@ package fr.ensma.a3.ia.maquettegraphique.plateau.agentplateau;
 
 
 
+import fr.ensma.a3.ia.maquettegraphique.plateau.agentcarte.IObserverCarte;
 import javafx.scene.layout.GridPane;
 
 public class VuePlateau extends GridPane implements IVuePlateau {
@@ -26,4 +27,14 @@ public class VuePlateau extends GridPane implements IVuePlateau {
 		}
 		
 	}
+
+	@Override
+	public void remove(int position) {
+		System.out.println("remove carte " + position);
+		mediateur.getPresentation().getLaCarte(position).getMediateur().getVue().desactive();
+		
+		
+	}
+	
+	
 }

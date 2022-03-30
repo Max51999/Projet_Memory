@@ -9,6 +9,10 @@ import fr.ensma.a3.ia.memory.interaction.Jeu;
 import fr.ensma.a3.ia.memory.jeu.Plateau_jeu;
 import fr.ensma.a3.ia.memory.jeu.carte.Abstract_carte;
 import fr.ensma.a3.ia.memory.jeu.carte.Carte_classique;
+import fr.ensma.a3.ia.memory.jeu.carte.mystere.Carte_mystere;
+import fr.ensma.a3.ia.memory.jeu.carte.mystere.Dans_ta_face;
+import fr.ensma.a3.ia.memory.jeu.carte.mystere.Melange_tout;
+import fr.ensma.a3.ia.memory.jeu.carte.mystere.Revele_tout;
 
 /**
  * 
@@ -26,8 +30,8 @@ public abstract class Abstract_joueur extends Thread implements IEtatJoueur {
 	private Integer nb_tours;
 	protected static Integer numero_joueur = 0;
 	private List<Carte_classique> liste_carte;
-	private Abstract_carte carte1;
-	private Abstract_carte carte2;
+	private Carte_classique carte1;
+	private Carte_classique carte2;
 	private int carte_choisi;
 	
 	private IEtatJoueur etat_courant;
@@ -146,14 +150,51 @@ public abstract class Abstract_joueur extends Thread implements IEtatJoueur {
 	 * Permet au joueur de retourner une carte
 	 */
 	public void retourne_carte(int i) {
-		if (carte_choisi == 0) {
-			carte1 = plateau.getCarte(i);
+		
+		Abstract_carte carte = null;
+		for (Abstract_carte ca : plateau.getListeCarte()) {
+			if (ca.getPosition() == i) {
+				carte = ca;
+			}
+		}
+		if (carte.getNumero() == 0) {
+			System.out.println("Je suis une carte mystère");
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			cache_carte(plateau.getCarte(i));
+			if (carte_choisi == 1) {
+				cache_carte(carte1);
+			}
+			carte_choisi = 0;
 		} else {
-			carte2 = plateau.getCarte(i);
-			cache_carte(carte1);
-			cache_carte(carte2);
-			paire_trouvee((Carte_classique) carte1, (Carte_classique) carte2);
 			
+			if (carte_choisi == 0) {
+				
+				carte1 = (Carte_classique) carte;
+				carte_choisi ++;
+				
+			} else {
+				carte2 = (Carte_classique) carte;
+				
+				try {
+					Thread.sleep(2000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				if (carte1 instanceof Carte_classique & carte2 instanceof Carte_classique) {
+					if (!paire_trouvee(carte1, carte2)) {
+						cache_carte(carte1);
+						cache_carte(carte2);
+					}
+				}
+				carte_choisi --;
+				
+			}
 		}
 	}
 	
@@ -165,13 +206,16 @@ public abstract class Abstract_joueur extends Thread implements IEtatJoueur {
 	 * V�rifie si une paire a �t� trouv�e
 	 * 
 	 */
-	public void paire_trouvee(Carte_classique c1, Carte_classique c2) {
+	public boolean paire_trouvee(Carte_classique c1, Carte_classique c2) {
 		if (c1.getNumero() == c2.getNumero()) {
 			ajout_carte(c1);
 			ajout_carte(c2);
 			nb_cartes += 2;
-			plateau.remove(carte1);
-			plateau.remove(carte1);
+			plateau.remove(c1);
+			plateau.remove(c2);
+			return true;
+		} else {
+			return false;
 		}
 	}
 	

@@ -35,6 +35,7 @@ public class PresentationGlobal {
 		
 		jeu = new Plateau_jeu();
 		jeu.initialisation(ETaille.moyen);
+		jeu.setGlobal(this);
 		plateau = new PresentationPlateau(this);
 		
 		
@@ -91,6 +92,7 @@ public class PresentationGlobal {
 
 	public void notifier(Integer numCarte) {
 		jeu.choix_carte(numCarte);
+		
 	}
 	
 	

@@ -1,6 +1,6 @@
 package fr.ensma.a3.ia.maquettegraphique.plateau.agentplateau;
 
-
+import fr.ensma.a3.ia.maquettegraphique.plateau.agentcarte.IObserverCarte;
 
 public class MediateurPlateau implements IPresentationPlateau {
 
@@ -19,6 +19,11 @@ public class MediateurPlateau implements IPresentationPlateau {
 
 	public VuePlateau getVue() {
 		return (VuePlateau)vue;
+	}
+
+	@Override
+	public void remove(IObserverCarte Carte) {
+		vue.remove(Carte.getPosition());
 	}
 	
 }

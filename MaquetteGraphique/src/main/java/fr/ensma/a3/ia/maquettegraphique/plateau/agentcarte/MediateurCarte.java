@@ -35,6 +35,8 @@ public class MediateurCarte implements IPresentationCarte {
 		vue.retourne();
 	}
 
-
+	public PresentationCarte getPresentation() {
+		return presentation;
+	}
 	
 }

@@ -6,4 +6,5 @@ public interface IPresentationCarte {
 	public void setVue(IVueCarte v);
 	public void change();
 	public void cache();
+	public PresentationCarte getPresentation();
 }

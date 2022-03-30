@@ -22,10 +22,10 @@ public class PresentationPlateau implements IObservableCarte {
 	
 	private List<IObserverCarte> liste;
 	
-	private List<Abstract_carte> liste_carte;
+	
 	private List<String> liste_deco;
 	
-	private Integer i;
+	
 	
 	public PresentationPlateau(PresentationGlobal g) {
 		global = g;
@@ -66,16 +66,37 @@ public class PresentationPlateau implements IObservableCarte {
 	}
 	
 	public IObserverCarte getCarte(Integer i) {
+		
 		return liste.get(i);
 	}
 
+	public IObserverCarte getLaCarte(Integer i) {
+		System.out.println("getlacarte");
+		IObserverCarte carte = null;
+		for (IObserverCarte ca : liste) {
+			if (ca.getPosition() == i) {
+				System.out.println("carte trouvee  " + ca.getPosition());
+				carte = ca;
+			}
+		}
+		System.out.println("carte trouvee  " + carte.getPosition());
+		return carte;
+	}
 	public MediateurPlateau getMediateur() {
 		return (MediateurPlateau)mediateur;
 	}
 
 	@Override
 	public void notifier(IObserverCarte cas) {
-		global.notifier(cas.getNumCarte());
+		global.notifier(cas.getPosition());
+		
+	}
+
+	public void remove(Integer position) {
+		IObserverCarte carte = getLaCarte(position);
+		liste.remove(carte);
+		mediateur.remove(carte);
+		
 	}
 	
 	

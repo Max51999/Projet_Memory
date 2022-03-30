@@ -43,11 +43,19 @@ public class VueCarte extends Button implements IVueCarte, EventHandler<ActionEv
 
 	@Override
 	public void handle(ActionEvent event) {
-		mediateur.change();
-		retourne();
+		if (imgact == imgverso) {
+			retourne();
+			
+			mediateur.change();
+			
+		} else {
+			mediateur.cache();
+		}
+		event.consume();
 	}
 	
 	public void retourne() {
+		
 		if (imgact == imgverso) {
 			imgact = imgrecto;
 			setGraphic(imgrecto);
@@ -55,6 +63,11 @@ public class VueCarte extends Button implements IVueCarte, EventHandler<ActionEv
 			imgact = imgverso;
 			setGraphic(imgverso);
 		}
+	}
+
+	public void desactive() {
+		System.out.println("Case "+ mediateur.getPresentation().getPosition() + " desactive");
+		setDisable(true);
 	}
 
 	

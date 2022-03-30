@@ -6,7 +6,6 @@ import java.util.List;
 import fr.ensma.a3.ia.maquettegraphique.PresentationGlobal;
 import fr.ensma.a3.ia.memory.jeu.carte.Abstract_carte;
 import fr.ensma.a3.ia.memory.jeu.carte.Carte_classique;
-import fr.ensma.a3.ia.memory.jeu.carte.mystere.Carte_mystere;
 import fr.ensma.a3.ia.memory.jeu.carte.mystere.Dans_ta_face;
 import fr.ensma.a3.ia.memory.jeu.carte.mystere.Melange_tout;
 import fr.ensma.a3.ia.memory.jeu.carte.mystere.Revele_tout;
@@ -26,6 +25,7 @@ public class Plateau_jeu extends Thread {
 	private List<Abstract_joueur> liste_joueur;
 	private List<Integer> liste_position;
 	
+	
 	private PresentationGlobal global;
 	
 	/**
@@ -33,6 +33,7 @@ public class Plateau_jeu extends Thread {
 	 */
 	public Plateau_jeu() {
 		liste_carte = new ArrayList<Abstract_carte>();
+		
 		liste_joueur = new ArrayList<Abstract_joueur>();
 		liste_position = new ArrayList<Integer>();
 	}
@@ -221,9 +222,8 @@ public class Plateau_jeu extends Thread {
 			ajout_carte(c);
 			liste_position.remove(random);
 		}
+		
 	}
-	
-	
 	
 	
 	/**
@@ -293,12 +293,14 @@ public class Plateau_jeu extends Thread {
 
 	public void remove(Abstract_carte carte) {
 		liste_carte.remove(carte);
-		
+		System.out.println(" ici remove " + carte.getPosition());
+		global.getPlateau().remove(carte.getPosition());
 	}
 
 
 	public void cache(int i) {
-		global.getPlateau().getCarte(i).cache();
+		global.getPlateau().getLaCarte(i).cache();
+		System.out.println("Cache la carte "+i);
 	}
 
 	public void choix_carte(Integer numCarte) {
